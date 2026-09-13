@@ -2,142 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LLCM - Launch Lane Creative Media | Port Elizabeth</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLCM - Launch Lane Creative Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--black:#0A0A0A;--card:#141414;--card2:#1a1a1a;--gold:#c9a96e;--grey:#8a8a8a;--white:#f5f5f5}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:'Open Sans',sans-serif}
-nav{position:fixed;top:0;width:100%;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.95);border-bottom:1px solid rgba(201,169,110,.15);z-index:1000}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:'Montserrat';font-weight:800;font-size:18px}
-.logo img{height:44px;width:auto;object-fit:contain}
-.nav-links{display:flex;gap:26px;list-style:none;font-family:'Montserrat';font-size:11px;letter-spacing:1.6px;text-transform:uppercase}
-.nav-links a{color:#ccc;text-decoration:none}.nav-links a:hover{color:var(--gold)}
-.btn{background:var(--gold);color:#000;padding:11px 20px;border-radius:6px;font-family:'Montserrat';font-weight:700;font-size:11px;text-decoration:none;letter-spacing:1px;border:none;cursor:pointer}
-.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
-.hamburger span{width:22px;height:2px;background:#fff;display:block}
-.mobile-menu{display:none;position:fixed;top:68px;left:0;width:100%;background:#0e0e0e;border-bottom:1px solid rgba(201,169,110,.15);padding:20px 5%;z-index:999}
-.mobile-menu a{display:block;padding:12px 0;color:#ccc;text-decoration:none;font-family:'Montserrat';font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:130px 5% 80px}
-.hero h1{font-family:'Montserrat';font-size:clamp(38px,8vw,78px);max-width:900px;line-height:0.95;font-weight:800;letter-spacing:-1px}
-.hero h1 span{color:var(--gold)}
-.hero p{color:var(--grey);max-width:680px;margin:24px 0 0;line-height:1.7;font-size:16px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:28px}
-section{padding:90px 5%}
-.tag{color:var(--gold);font-family:'Montserrat';font-size:11px;letter-spacing:2.5px;font-weight:700;text-transform:uppercase;margin-bottom:10px}
-.title{font-family:'Montserrat';font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.2;margin-bottom:14px}
-.desc{color:var(--grey);max-width:720px;line-height:1.7;font-size:15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:32px}
-.card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:24px;transition:.2s}
-.card:hover{border-color:rgba(201,169,110,.25)}
-.card h3{font-family:'Montserrat';font-size:15px;margin-bottom:8px;line-height:1.3}
-.card p{color:var(--grey);font-size:13px;line-height:1.6}
-.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:30px}
-.portfolio-box{background:var(--card2);border:1px dashed rgba(201,169,110,.25);border-radius:10px;height:210px;display:flex;align-items:center;justify-content:center;color:var(--grey);font-family:'Montserrat';font-size:11px;letter-spacing:1px;text-align:center;padding:20px}
-.founder-card{margin-top:28px;display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid rgba(201,169,110,.2);border-radius:12px;padding:18px 22px;max-width:460px}
-.avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6d3b);display:flex;align-items:center;justify-content:center;font-family:'Montserrat';font-weight:800;color:#000;font-size:18px}
-.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px}
-.form{background:var(--card);border:1px solid rgba(201,169,110,.15);border-radius:12px;padding:22px}
-.form input,.form textarea,.form select{width:100%;margin-top:12px;padding:13px;border-radius:8px;border:1px solid #2a2a2a;background:#0e0e0e;color:#fff;font-family:'Open Sans';font-size:14px}
-footer{padding:30px 5%;border-top:1px solid rgba(255,255,255,.07);color:#777;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-@media(max-width:800px){.nav-links,.nav-btn{display:none}.hamburger{display:flex}.contact-wrap{grid-template-columns:1fr}}
+:root{--black:#0A0A0A;--neon:#BFFF00;--blue:#3B82F6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--black);color:white;font-family:'Inter',sans-serif;text-align:center}
+nav{padding:20px;display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
+.nav-links a{color:white;text-decoration:none;margin-left:25px;font-size:14px;opacity:.8}
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 20px}
+.hero img{width:90%;max-width:650px;height:auto;filter:drop-shadow(0 0 30px rgba(191,255,0,0.3));margin-bottom:30px}
+.hero h1{font-size:42px;font-weight:800;line-height:1.1;margin-bottom:15px}
+.hero h1 span{color:var(--neon)}
+.hero p{max-width:600px;opacity:.7;line-height:1.6;margin-bottom:35px}
+.btns{display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
+.btn{padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:600;font-size:14px}
+.btn-neon{background:var(--neon);color:black}
+.btn-outline{border:1px solid rgba(255,255,255,0.2);color:white}
+.services{padding:80px 20px;max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#141414;border-radius:20px;padding:30px;text-align:left;border:1px solid rgba(255,255,255,0.05)}
+.card h3{margin-bottom:10px}
+.card p{opacity:.6;font-size:14px;line-height:1.5}
+footer{padding:40px;opacity:.4;font-size:13px;border-top:1px solid rgba(255,255,255,0.05);margin-top:60px}
 </style>
 </head>
 <body>
 <nav>
-<a class="logo" href="index.html"><img src="llcm-official-logo.png" alt="LLCM Official Logo">LLCM</a>
-<ul class="nav-links"><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li><li><a href="verify.html">Verify</a></li></ul>
-<div style="display:flex;gap:10px;align-items:center"><a class="btn nav-btn" href="https://wa.me/27625636067" target="_blank">WHATSAPP</a><div class="hamburger" onclick="document.getElementById('mMenu').style.display=document.getElementById('mMenu').style.display==='block'?'none':'block'"><span></span><span></span><span></span></div></div>
+<div style="font-weight:800;letter-spacing:1px">LLCM</div>
+<div class="nav-links">
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
-<div class="mobile-menu" id="mMenu"><a href="#services" onclick="this.parentElement.style.display='none'">Services</a><a href="#about" onclick="this.parentElement.style.display='none'">About</a><a href="#portfolio" onclick="this.parentElement.style.display='none'">Portfolio</a><a href="#contact" onclick="this.parentElement.style.display='none'">Contact</a><a href="verify.html">Verify Certificate</a><a href="https://wa.me/27625636067" style="color:var(--gold)">WhatsApp +27 62 563 6067</a></div>
 
 <div class="hero">
-<div class="tag">LINTON GRANGE, PORT ELIZABETH, EASTERN CAPE</div>
-<h1>CREATE.<br>CAPTURE.<br><span>GROW.</span></h1>
-<p>Creative Media & Digital Services to Help Businesses Look Professional, Reach More Customers and Grow Online.</p>
-<div class="hero-btns"><a class="btn" href="#services">OUR 8 SERVICES</a><a class="btn btn-outline" href="#contact">GET STARTED</a></div>
-</div>
-
-<section id="services">
-<div class="tag">WHAT WE DO</div>
-<div class="title">8 Professional Services - Locked Approved Version</div>
-<p class="desc">Honest, professional and creative solutions for shops, restaurants, startups and local businesses in Port Elizabeth.</p>
-<div class="grid">
-<div class="card"><h3>1. Social Media Advertising</h3><p>Facebook, Instagram, TikTok and WhatsApp promotional content to reach more customers.</p></div>
-<div class="card"><h3>2. Graphic Design</h3><p>Flyers, posters, promotional graphics, social media posts and marketing materials.</p></div>
-<div class="card"><h3>3. Short-Form Video & Reels</h3><p>15–30 second promotional videos and social media adverts designed to capture attention.</p></div>
-<div class="card"><h3>4. Branding & Logo Design</h3><p>Professional logos, branding concepts and visual identity materials.</p></div>
-<div class="card"><h3>5. Website Design</h3><p>Modern, mobile-friendly websites for businesses and entrepreneurs.</p></div>
-<div class="card"><h3>6. Digital Business Support</h3><p>Practical assistance with digital business materials and professional online presentation.</p></div>
-<div class="card"><h3>7. CV & Job Application Support</h3><p>Professional CV formatting and job-application document assistance.</p></div>
-<div class="card"><h3>8. Business Promotional Materials</h3><p>Creative marketing materials for shops, restaurants, startups and local businesses.</p></div>
-</div>
-</section>
-
-<section id="about">
-<div class="tag">ABOUT LLCM</div>
-<div class="title">Built for Real Businesses</div>
-<p class="desc">Launch Lane Creative Media is based in Linton Grange, Port Elizabeth, Eastern Cape, South Africa. We do not invent fake clients, testimonials or awards. We provide honest creative media services to help real businesses look professional online and grow.</p>
-<div class="founder-card"><div class="avatar">MH</div><div><div style="font-family:Montserrat;font-weight:700;font-size:15px;color:#fff">Malik Hameed Awan</div><div style="font-size:11px;letter-spacing:1.5px;color:var(--gold);font-family:Montserrat;margin-top:2px">FOUNDER & CEO</div><div style="font-size:12px;color:var(--grey);margin-top:4px">Linton Grange, Port Elizabeth</div></div></div>
-</section>
-
-<section id="portfolio">
-<div class="tag">PORTFOLIO</div>
-<div class="title">Our Work</div>
-<p class="desc">Portfolio placeholders - No fake clients used. Real work will be showcased here as we complete projects for local businesses.</p>
-<div class="portfolio-grid">
-<div class="portfolio-box">Portfolio Item 1<br>Coming Soon</div>
-<div class="portfolio-box">Portfolio Item 2<br>Coming Soon</div>
-<div class="portfolio-box">Portfolio Item 3<br>Coming Soon</div>
-<div class="portfolio-box">Portfolio Item 4<br>Coming Soon</div>
-<div class="portfolio-box">Portfolio Item 5<br>Coming Soon</div>
-<div class="portfolio-box">Portfolio Item 6<br>Coming Soon</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="tag">GET IN TOUCH</div>
-<div class="title">Let's Launch Your Business</div>
-<div class="contact-wrap">
-<div>
-<p style="margin:10px 0;color:var(--grey)"><b style="color:#fff">Location:</b> Linton Grange, Port Elizabeth, Eastern Cape 6025, South Africa</p>
-<p style="margin:10px 0;color:var(--grey)"><b style="color:#fff">WhatsApp:</b> +27 62 563 6067</p>
-<p style="margin:10px 0;color:var(--grey)"><b style="color:#fff">Call:</b> +27 73 456 1486</p>
-<p style="margin:10px 0;color:var(--grey)"><b style="color:#fff">Email:</b> llcmediaza@gmail.com</p>
-<p style="margin-top:20px;font-size:12px;color:var(--grey);line-height:1.6">Certificate Verification is a SEPARATE page - not part of 8 services.<br>Verify link: llcmedia.co.za/verify/LLCM-AI-001<br><a href="verify.html" style="color:var(--gold)">Go to Verification Page →</a></p>
-</div>
-<div class="form">
-<input id="wName" placeholder="Your Name">
-<input id="wPhone" placeholder="Phone / WhatsApp">
-<select id="wService">
-<option>Social Media Advertising</option>
-<option>Graphic Design</option>
-<option>Short-Form Video & Reels</option>
-<option>Branding & Logo Design</option>
-<option>Website Design</option>
-<option>Digital Business Support</option>
-<option>CV & Job Application Support</option>
-<option>Business Promotional Materials</option>
-</select>
-<textarea id="wMessage" rows="4" placeholder="Tell us about your business..."></textarea>
-<button onclick="sendWA()" class="btn" style="width:100%;margin-top:14px;padding:14px">SEND VIA WHATSAPP</button>
+<img src="llcm-official-logo.png" alt="Launch Lane Creative Media Logo">
+<h1>We Build Brands That <span>Launch</span> Forward</h1>
+<p>Launch Lane Creative Media is a full-service creative agency in Port Elizabeth specializing in branding, web design, video and digital marketing that drives growth.</p>
+<div class="btns">
+<a class="btn btn-neon" href="#contact">Start Your Project</a>
+<a class="btn btn-outline" href="#work">View Work</a>
 </div>
 </div>
-</section>
 
-<footer><div>© 2026 LLCM - Launch Lane Creative Media - Linton Grange, Port Elizabeth, Eastern Cape</div><div><a href="verify.html" style="color:var(--gold);text-decoration:none">Verify Certificate</a> | WhatsApp +27 62 563 6067</div></footer>
+<div id="services" class="services">
+<div class="card"><h3>🎨 Branding</h3><p>Logo design, brand identity, and guidelines that make you unforgettable.</p></div>
+<div class="card"><h3>💻 Web Design</h3><p>Fast, modern, mobile-first websites that convert visitors to customers.</p></div>
+<div class="card"><h3>🎬 Video & Content</h3><p>High-impact video, photography and social content that tells your story.</p></div>
+</div>
 
-<script>
-function sendWA(){
-const n=document.getElementById('wName').value||'Not provided';
-const p=document.getElementById('wPhone').value||'Not provided';
-const s=document.getElementById('wService').value;
-const m=document.getElementById('wMessage').value||'No message';
-const t=`*NEW ENQUIRY - LLCM*%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AService: ${encodeURIComponent(s)}%0AMessage: ${encodeURIComponent(m)}`;
-window.open(`https://wa.me/27625636067?text=${t}`,'_blank');
-}
-</script>
+<footer>
+© 2026 Launch Lane Creative Media - Port Elizabeth, South Africa<br>
+llcmediaza@gmail.com
+</footer>
 </body>
 </html>
