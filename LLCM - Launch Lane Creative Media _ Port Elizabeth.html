@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLCM - Launch Lane Creative Media | Port Elizabeth</title>
+<meta name="description" content="Launch Lane Creative Media provides creative media and digital services for businesses across South Africa.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0A0A0A;
+  --gold:#c9a96e;
+  --white:#ffffff;
+  --light:#f5f5f5;
+  --dark:#171717;
+  --gray:#bdbdbd;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Open Sans",sans-serif;background:var(--black);color:var(--white);line-height:1.6;}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;}
+a{color:inherit;text-decoration:none;}
+nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,10,.96);border-bottom:1px solid rgba(201,169,110,.25);padding:12px 5%;}
+.nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.logo{display:flex;align-items:center;}
+.logo img{width:75px;height:75px;object-fit:contain;display:block;}
+.nav-links{display:flex;gap:25px;align-items:center;flex-wrap:wrap;}
+.nav-links a{font-size:14px;font-weight:600;transition:.3s;}
+.nav-links a:hover{color:var(--gold);}
+.hero{min-height:650px;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;background:radial-gradient(circle at center,rgba(201,169,110,.12),transparent 45%),var(--black);}
+.hero-content{max-width:900px;}
+.hero-logo{width:150px;height:150px;object-fit:contain;margin:0 auto 25px;display:block;}
+.hero h1{font-size:clamp(42px,8vw,82px);line-height:1.05;letter-spacing:2px;}
+.hero h1 span{color:var(--gold);}
+.hero h2{color:var(--gold);font-size:clamp(20px,4vw,32px);margin:22px 0;}
+.hero p{max-width:720px;margin:0 auto 30px;color:#ddd;font-size:18px;}
+.btn{display:inline-block;background:var(--gold);color:var(--black);padding:14px 28px;border-radius:5px;font-family:"Montserrat",sans-serif;font-weight:700;margin:6px;transition:.3s;}
+.btn:hover{transform:translateY(-2px);background:#dfc28a;}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold);}
+section{padding:80px 5%;}
+.container{max-width:1150px;margin:auto;}
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h2{font-size:38px;}
+.section-title p{color:var(--gray);margin-top:10px;}
+.about{background:#111;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.about h3{color:var(--gold);font-size:25px;margin-bottom:15px;}
+.about p{color:#ddd;margin-bottom:15px;}
+.services{background:var(--black);}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.service-card{background:var(--dark);border:1px solid rgba(201,169,110,.2);border-radius:8px;padding:28px 20px;text-align:center;transition:.3s;}
+.service-card:hover{transform:translateY(-5px);border-color:var(--gold);}
+.service-card .icon{font-size:34px;margin-bottom:15px;}
+.service-card h3{color:var(--gold);font-size:18px;margin-bottom:10px;}
+.service-card p{color:#bbb;font-size:14px;}
+.why{background:#111;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;}
+.why-card{text-align:center;padding:30px 20px;}
+.why-card h3{color:var(--gold);margin:12px 0;}
+.why-card p{color:#bbb;}
+.contact{background:var(--black);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;}
+.contact-info{background:var(--dark);padding:35px;border-radius:8px;border:1px solid rgba(201,169,110,.2);}
+.contact-info h3{color:var(--gold);margin-bottom:20px;}
+.contact-item{margin:18px 0;color:#ddd;}
+.contact-item strong{color:var(--gold);display:block;margin-bottom:4px;}
+.contact-form{background:var(--dark);padding:35px;border-radius:8px;border:1px solid rgba(201,169,110,.2);}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;margin-bottom:7px;font-weight:600;}
+.form-group input,.form-group textarea{width:100%;padding:13px;border-radius:4px;border:1px solid #444;background:#0d0d0d;color:white;font-family:"Open Sans",sans-serif;}
+.form-group textarea{min-height:130px;resize:vertical;}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);}
+footer{background:#050505;border-top:1px solid rgba(201,169,110,.25);text-align:center;padding:30px 20px;}
+footer img{width:70px;height:70px;object-fit:contain;margin-bottom:10px;}
+footer p{color:#999;font-size:14px;}
+.gold{color:var(--gold);}
+@media(max-width:900px){.service-grid{grid-template-columns:repeat(2,1fr);}.about-grid,.contact-grid{grid-template-columns:1fr;}.why-grid{grid-template-columns:1fr;}.nav-links{gap:12px;}.nav-links a{font-size:12px;}}
+@media(max-width:600px){nav{padding:8px 4%;}.nav-inner{flex-direction:column;gap:5px;}.logo img{width:65px;height:65px;}.nav-links{flex-wrap:wrap;justify-content:center;gap:10px 15px;}.hero{min-height:600px;padding:60px 18px;}.hero-logo{width:120px;height:120px;}.hero p{font-size:16px;}section{padding:60px 18px;}.section-title h2{font-size:30px;}.service-grid{grid-template-columns:1fr;}.contact-info,.contact-form{padding:25px 20px;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <img src="llcm-official-logo.png" alt="Launch Lane Creative Media Logo">
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="services-llcm.html">Services</a>
+      <a href="packages-llcm.html">Packages</a>
+      <a href="pricing-llcm.html">Pricing</a>
+      <a href="portfolio-llcm.html">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <img src="llcm-official-logo.png" alt="Launch Lane Creative Media" class="hero-logo">
+    <h1>CREATE.<br>CAPTURE.<br><span>GROW.</span></h1>
+    <h2>Launch Lane Creative Media</h2>
+    <p>Creative Media & Digital Services to Help Businesses Look Professional, Reach More Customers and Grow Online.</p>
+    <a href="#contact" class="btn">GET STARTED</a>
+    <a href="https://wa.me/27625636067" class="btn btn-outline">WHATSAPP US</a>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-title"><h2>About <span class="gold">LLCM</span></h2><p>Helping businesses build a stronger digital presence.</p></div>
+    <div class="about-grid">
+      <div><h3>Launch Lane Creative Media</h3><p>LLCM provides creative media and digital services designed to help businesses present themselves professionally and connect with more customers online.</p><p>From social media advertising and graphic design to websites, branding and digital business support, we help turn ideas into professional business solutions.</p></div>
+      <div><h3>Our Approach</h3><p>We focus on practical, affordable and professional digital solutions for businesses, entrepreneurs and individuals.</p><p><strong class="gold">Create.</strong> <strong class="gold">Capture.</strong> <strong class="gold">Grow.</strong></p></div>
+    </div>
+  </div>
+</section>
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title"><h2>Our <span class="gold">Services</span></h2><p>Professional creative and digital services.</p></div>
+    <div class="service-grid">
+      <div class="service-card"><div class="icon">📢</div><h3>Social Media Advertising</h3><p>Promotional content and advertising solutions to help businesses reach more customers.</p></div>
+      <div class="service-card"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Professional graphics for social media, promotions and business communication.</p></div>
+      <div class="service-card"><div class="icon">🎬</div><h3>Short-Form Video & Reels</h3><p>Engaging short-form content designed for modern social media platforms.</p></div>
+      <div class="service-card"><div class="icon">✨</div><h3>Branding & Logo Design</h3><p>Professional visual identity solutions to help businesses stand out.</p></div>
+      <div class="service-card"><div class="icon">💻</div><h3>Website Design</h3><p>Clean, responsive websites designed to give businesses a professional online presence.</p></div>
+      <div class="service-card"><div class="icon">📱</div><h3>Digital Business Support</h3><p>Practical digital assistance for businesses and entrepreneurs.</p></div>
+      <div class="service-card"><div class="icon">📄</div><h3>CV & Job Application Support</h3><p>Professional CV and job application support to help individuals present themselves effectively.</p></div>
+      <div class="service-card"><div class="icon">📣</div><h3>Business Promotional Materials</h3><p>Promotional designs and digital materials for businesses, offers and campaigns.</p></div>
+    </div>
+  </div>
+</section>
+<section class="why">
+  <div class="container">
+    <div class="section-title"><h2>Why Choose <span class="gold">LLCM?</span></h2></div>
+    <div class="why-grid">
+      <div class="why-card"><div class="icon">💡</div><h3>Creative</h3><p>Fresh and professional ideas designed around your business.</p></div>
+      <div class="why-card"><div class="icon">🎯</div><h3>Practical</h3><p>Digital solutions focused on real business needs.</p></div>
+      <div class="why-card"><div class="icon">📈</div><h3>Growth Focused</h3><p>Helping businesses improve their presence and reach more customers.</p></div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-title"><h2>Let's <span class="gold">Work Together</span></h2><p>Tell us what your business needs.</p></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact LLCM</h3>
+        <div class="contact-item"><strong>Email</strong><a href="mailto:llcmediaza@gmail.com">llcmediaza@gmail.com</a></div>
+        <div class="contact-item"><strong>WhatsApp</strong><a href="https://wa.me/27625636067">+27 62 563 6067</a></div>
+        <div class="contact-item"><strong>Direct Call</strong><a href="tel:+27734561486">+27 73 456 1486</a></div>
+        <div class="contact-item"><strong>Location</strong>Linton Grange, Port Elizabeth, Eastern Cape</div>
+        <div class="contact-item"><strong>Service Area</strong>Online services across South Africa</div>
+      </div>
+      <div class="contact-form">
+        <h3 class="gold" style="margin-bottom:20px;">Send an Enquiry</h3>
+        <form action="mailto:llcmediaza@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="Name" placeholder="Your name" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="Email" placeholder="Your email" required></div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="Message" placeholder="Tell us how we can help..." required></textarea></div>
+          <button type="submit" class="btn">SEND ENQUIRY</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <img src="llcm-official-logo.png" alt="LLCM Logo">
+  <p><strong class="gold">Launch Lane Creative Media</strong></p>
+  <p>Create. Capture. Grow.</p>
+  <p style="margin-top:10px;">© 2026 Launch Lane Creative Media. All Rights Reserved.</p>
+</footer>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</html>
