@@ -3,196 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Launch Lane Creative Media | LLCM</title>
-
+<meta name="description" content="Launch Lane Creative Media — Creative Media & Digital Services. CREATE. CAPTURE. GROW.">
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#0a0a0a;
+color:#fff;
+line-height:1.6
 }
-
-html {
-  scroll-behavior: smooth;
+a{text-decoration:none;color:inherit}
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(10,10,10,.96);
+border-bottom:1px solid #c9a96e;
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: #f5f5f5;
-  line-height: 1.6;
+.nav{
+max-width:1150px;
+margin:auto;
+padding:14px 22px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
-
-header {
-  background: #0a0a0a;
-  border-bottom: 1px solid #c9a96e;
-  padding: 18px 5%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo{
+width:58px;
+height:58px;
+object-fit:contain;
 }
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+.brand strong{
+display:block;
+font-size:19px;
+letter-spacing:1px;
+color:#f5d76e;
 }
-
-.logo {
-  color: #d4af37;
-  font-size: 22px;
-  font-weight: bold;
+.brand span{
+font-size:11px;
+letter-spacing:2px;
+color:#ddd;
 }
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 15px;
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
 }
-
-nav a:hover {
-  color: #d4af37;
+nav a{
+font-size:14px;
+color:#ddd;
+transition:.2s;
 }
-
-section {
-  padding: 70px 6%;
-  max-width: 1200px;
-  margin: auto;
+nav a:hover{color:#f5d76e}
+.hero{
+min-height:72vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:80px 20px;
+background:
+radial-gradient(circle at center,#211b0b 0,#0a0a0a 55%);
 }
-
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+.hero-inner{max-width:850px}
+.hero img{
+width:125px;
+max-width:40%;
+margin-bottom:25px;
 }
-
-.hero h1 {
-  font-size: clamp(45px, 8vw, 90px);
-  color: #d4af37;
-  line-height: 0.95;
-  margin-bottom: 25px;
+.kicker{
+color:#d4af37;
+font-size:13px;
+font-weight:bold;
+letter-spacing:4px;
+margin-bottom:15px;
 }
-
-.hero p {
-  max-width: 750px;
-  font-size: 18px;
-  color: #ddd;
+h1{
+font-size:clamp(42px,8vw,78px);
+line-height:1;
+margin-bottom:20px;
+letter-spacing:2px;
 }
-
-.btn {
-  display: inline-block;
-  margin: 25px 8px 0;
-  padding: 13px 24px;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: bold;
+.gold{color:#f5d76e}
+.hero p{
+max-width:680px;
+margin:0 auto 30px;
+color:#ccc;
+font-size:18px;
 }
-
-.btn:hover {
-  background: #d4af37;
-  color: #000;
+.tagline{
+font-size:22px;
+letter-spacing:5px;
+color:#f5d76e;
+font-weight:bold;
+margin-bottom:30px;
 }
-
-h2 {
-  color: #d4af37;
-  font-size: 34px;
-  margin-bottom: 15px;
-  text-align: center;
+.btn{
+display:inline-block;
+padding:13px 25px;
+margin:6px;
+border:1px solid #d4af37;
+border-radius:5px;
+font-weight:bold;
+font-size:14px;
 }
-
-.section-intro {
-  text-align: center;
-  color: #ccc;
-  margin-bottom: 35px;
+.btn.gold-btn{
+background:#d4af37;
+color:#080808;
 }
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+.btn:hover{transform:translateY(-2px)}
+section{
+max-width:1150px;
+margin:auto;
+padding:75px 22px;
 }
-
-.card {
-  background: #111;
-  border: 1px solid #333;
-  padding: 25px;
-  border-radius: 8px;
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:12px;
+color:#f5d76e;
 }
-
-.card h3 {
-  color: #d4af37;
-  margin-bottom: 10px;
+.section-sub{
+text-align:center;
+color:#aaa;
+margin-bottom:40px;
 }
-
-.card p {
-  color: #ccc;
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 }
-
-.about-box {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-  color: #ccc;
+.card{
+background:#111;
+border:1px solid #292929;
+border-radius:10px;
+padding:28px 22px;
+transition:.25s;
 }
-
-.founder {
-  text-align: center;
-  margin-top: 30px;
+.card:hover{
+border-color:#c9a96e;
+transform:translateY(-4px);
 }
-
-.founder strong {
-  color: #d4af37;
-  font-size: 22px;
+.card h3{
+color:#f5d76e;
+margin-bottom:10px;
+font-size:19px;
 }
-
-.portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+.card p{color:#bbb;font-size:14px}
+.about{
+background:#101010;
+max-width:none;
 }
-
-.portfolio-item {
-  min-height: 150px;
-  background: #111;
-  border: 1px solid #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #aaa;
+.about-inner{
+max-width:900px;
+margin:auto;
+text-align:center;
 }
-
-.contact {
-  text-align: center;
+.about p{
+color:#ccc;
+margin-top:15px;
 }
-
-.contact p {
-  margin: 8px 0;
-  color: #ddd;
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
 }
-
-.contact a {
-  color: #d4af37;
-  text-decoration: none;
+.portfolio-item{
+min-height:170px;
+border:1px solid #333;
+border-radius:9px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+background:#111;
+color:#888;
 }
-
-footer {
-  border-top: 1px solid #333;
-  padding: 30px 5%;
-  text-align: center;
-  color: #999;
-  font-size: 14px;
+.contact{
+text-align:center;
+background:#101010;
+max-width:none;
 }
-
-footer a {
-  color: #d4af37;
-  text-decoration: none;
+.contact-inner{max-width:800px;margin:auto}
+.contact p{color:#bbb;margin:10px 0 25px}
+footer{
+border-top:1px solid #292929;
+text-align:center;
+padding:25px 15px;
+color:#777;
+font-size:13px;
+}
+footer strong{color:#c9a96e}
+@media(max-width:700px){
+.nav{flex-direction:column}
+nav{justify-content:center;gap:12px}
+.hero{min-height:75vh;padding:60px 18px}
+.logo{width:52px;height:52px}
+.brand strong{font-size:16px}
 }
 </style>
 </head>
@@ -200,218 +212,143 @@ footer a {
 <body>
 
 <header>
-<nav>
-  <div class="logo">LLCM</div>
+<div class="nav">
+<a href="#" class="logo-wrap">
+<img src="llcm-official-logo.png" class="logo" alt="LLCM Logo">
+<div class="brand">
+<strong>Launch Lane Creative Media</strong>
+<span>CREATE. CAPTURE. GROW.</span>
+</div>
+</a>
 
-  <div>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-    <a href="verify.html">Verify</a>
-  </div>
+<nav>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+<a href="pricing-llcm.html">Pricing</a>
+<a href="packages-llcm.html">Packages</a>
+<a href="faq-llcm.html">FAQ</a>
 </nav>
+</div>
 </header>
 
+<main>
+
 <section class="hero">
-
-  <h1>CREATE.<br>CAPTURE.<br>GROW.</h1>
-
-  <p>
-    Creative Media & Digital Services to Help Businesses Look Professional,
-    Reach More Customers and Grow Online.
-  </p>
-
-  <div>
-    <a class="btn" href="#services">OUR 8 SERVICES</a>
-    <a class="btn" href="#contact">GET STARTED</a>
-  </div>
-
+<div class="hero-inner">
+<img src="llcm-official-logo.png" alt="Launch Lane Creative Media logo">
+<div class="kicker">LAUNCH LANE CREATIVE MEDIA</div>
+<h1>Build Your Brand.<br><span class="gold">Grow Your Business.</span></h1>
+<p>
+Creative media and digital services designed to help businesses,
+entrepreneurs and individuals present themselves professionally online.
+</p>
+<div class="tagline">CREATE. CAPTURE. GROW.</div>
+<a class="btn gold-btn" href="https://wa.me/27625636067">WhatsApp Us</a>
+<a class="btn" href="#services">Explore Services</a>
+</div>
 </section>
 
 <section id="services">
-
-<h2>WHAT WE DO</h2>
-
-<p class="section-intro">
-8 Professional Services - Locked Approved Version
-<br>
-Honest, professional and creative solutions for shops, restaurants,
-startups and local businesses in Port Elizabeth.
-</p>
+<h2 class="section-title">Our Services</h2>
+<p class="section-sub">Practical digital solutions for businesses and individuals.</p>
 
 <div class="services">
 
 <div class="card">
-<h3>1. Social Media Advertising</h3>
-<p>
-Facebook, Instagram, TikTok and WhatsApp promotional content
-to reach more customers.
-</p>
+<h3>Social Media Advertising</h3>
+<p>Professional social media adverts and promotional campaigns for your business.</p>
 </div>
 
 <div class="card">
-<h3>2. Graphic Design</h3>
-<p>
-Flyers, posters, promotional graphics, social media posts
-and marketing materials.
-</p>
+<h3>Graphic Design</h3>
+<p>Posters, flyers, social media graphics and professional business designs.</p>
 </div>
 
 <div class="card">
-<h3>3. Short-Form Video & Reels</h3>
-<p>
-15–30 second promotional videos and social media adverts
-designed to capture attention.
-</p>
+<h3>Short-Form Video & Reels</h3>
+<p>Engaging short videos and reels designed for social media promotion.</p>
 </div>
 
 <div class="card">
-<h3>4. Branding & Logo Design</h3>
-<p>
-Professional logos, branding concepts and visual identity materials.
-</p>
+<h3>Branding & Logo Design</h3>
+<p>Professional logos and visual branding to help your business stand out.</p>
 </div>
 
 <div class="card">
-<h3>5. Website Design</h3>
-<p>
-Modern, mobile-friendly websites for businesses and entrepreneurs.
-</p>
+<h3>Website Design</h3>
+<p>Clean, professional websites for small businesses, entrepreneurs and organisations.</p>
 </div>
 
 <div class="card">
-<h3>6. Digital Business Support</h3>
-<p>
-Practical assistance with digital business materials and
-professional online presentation.
-</p>
+<h3>Digital Business Support</h3>
+<p>Practical assistance with digital business tasks, documents and online services.</p>
 </div>
 
 <div class="card">
-<h3>7. CV & Job Application Support</h3>
-<p>
-Professional CV formatting and job-application document assistance.
-</p>
+<h3>CV & Job Application Support</h3>
+<p>Professional CVs, cover letters, job applications and assistance with visa or permit application files.</p>
 </div>
 
 <div class="card">
-<h3>8. Business Promotional Materials</h3>
-<p>
-Creative marketing materials for shops, restaurants, startups
-and local businesses.
-</p>
+<h3>Business Promotional Materials</h3>
+<p>Business cards, promotional graphics, flyers and other marketing materials.</p>
 </div>
 
 </div>
 </section>
 
-<section id="about">
-
-<h2>ABOUT LLCM</h2>
-
-<div class="about-box">
-
-<h3>Built for Real Businesses</h3>
-
+<section id="about" class="about">
+<div class="about-inner">
+<h2 class="section-title">About LLCM</h2>
 <p>
-Launch Lane Creative Media is based in Linton Grange,
-Port Elizabeth, Eastern Cape, South Africa.
-We do not invent fake clients, testimonials or awards.
-We provide honest creative media services to help real
-businesses look professional online and grow.
+Launch Lane Creative Media provides affordable creative media and digital
+services for businesses and individuals in Gqeberha and across South Africa.
 </p>
-
-<div class="founder">
-<strong>MH</strong><br>
-Malik Hameed Awan<br>
-Founder & CEO<br>
-Linton Grange, Port Elizabeth
-</div>
-
+<p>
+Our goal is simple: help you <strong class="gold">CREATE</strong> professional
+content, <strong class="gold">CAPTURE</strong> attention and
+<strong class="gold">GROW</strong> your presence.
+</p>
 </div>
 </section>
 
 <section id="portfolio">
+<h2 class="section-title">Portfolio</h2>
+<p class="section-sub">Our creative work and selected projects.</p>
 
-<h2>PORTFOLIO</h2>
-
-<p class="section-intro">
-Our Work
-<br>
-Portfolio placeholders - No fake clients used.
-Real work will be showcased here as we complete projects
-for local businesses.
-</p>
-
-<div class="portfolio">
-
-<div class="portfolio-item">Portfolio Item 1<br>Coming Soon</div>
-<div class="portfolio-item">Portfolio Item 2<br>Coming Soon</div>
-<div class="portfolio-item">Portfolio Item 3<br>Coming Soon</div>
-<div class="portfolio-item">Portfolio Item 4<br>Coming Soon</div>
-<div class="portfolio-item">Portfolio Item 5<br>Coming Soon</div>
-<div class="portfolio-item">Portfolio Item 6<br>Coming Soon</div>
-
+<div class="portfolio-grid">
+<div class="portfolio-item">Creative Media Projects</div>
+<div class="portfolio-item">Social Media Advertising</div>
+<div class="portfolio-item">Graphic Design</div>
+<div class="portfolio-item">Branding & Logos</div>
+<div class="portfolio-item">Short-Form Video & Reels</div>
+<div class="portfolio-item">Website Design</div>
 </div>
 </section>
 
-<section id="contact">
-
-<h2>GET IN TOUCH</h2>
-
-<div class="contact">
-
-<h3>Let's Launch Your Business</h3>
-
+<section id="contact" class="contact">
+<div class="contact-inner">
+<h2 class="section-title">Let's Work Together</h2>
 <p>
-Location: Linton Grange, Port Elizabeth, Eastern Cape 6025, South Africa
+Ready to launch your next idea or improve your business presence?
+Contact Launch Lane Creative Media today.
 </p>
 
-<p>
-WhatsApp:
-<a href="https://wa.me/27625636067">
-+27 62 563 6067
-</a>
-</p>
-
-<p>Call: +27 73 456 1486</p>
-
-<p>
-Email:
-<a href="mailto:llcmediaza@gmail.com">
-llcmediaza@gmail.com
-</a>
-</p>
-
-<a class="btn" href="https://wa.me/27625636067">
-SEND VIA WHATSAPP
-</a>
-
+<a class="btn gold-btn" href="https://wa.me/27625636067">WhatsApp: 062 563 6067</a>
+<a class="btn" href="tel:+27734561486">Call: 073 456 1486</a>
+<p>Email: llcmediaza@gmail.com</p>
+<p>Gqeberha, Eastern Cape • Online services across South Africa</p>
 </div>
 </section>
+
+</main>
 
 <footer>
-
-<p>
-Certificate Verification is a SEPARATE page - not part of the 8 services.
-</p>
-
-<p>
-<a href="verify.html">Verify Certificate</a>
-&nbsp; | &nbsp;
-<a href="https://wa.me/27625636067">
-WhatsApp +27 62 563 6067
-</a>
-</p>
-
-<br>
-
-<p>
-© 2026 LLCM - Launch Lane Creative Media -
-Linton Grange, Port Elizabeth, Eastern Cape
-</p>
-
+<strong>Launch Lane Creative Media | LLCM</strong><br>
+CREATE. CAPTURE. GROW.<br>
+© 2026 LLCM. All rights reserved.
 </footer>
 
 </body>
