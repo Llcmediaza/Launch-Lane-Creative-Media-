@@ -111,8 +111,7 @@ color:var(--lightgold);
 .hero{
 padding:90px 0 80px;
 text-align:center;
-background:
-radial-gradient(circle at top,#211a09 0,#080808 55%);
+background:radial-gradient(circle at top,#211a09 0,#080808 55%);
 }
 
 .hero-logo{
@@ -264,18 +263,15 @@ gap:25px;
 align-items:stretch;
 }
 
-.photo-space{
+.team-video{
+width:100%;
+height:100%;
 min-height:350px;
-border:1px dashed #6d5a25;
+object-fit:cover;
 border-radius:14px;
+border:1px solid #6d5a25;
 background:#101010;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#806f39;
-font-weight:bold;
-font-size:18px;
+display:block;
 }
 
 .team-card{
@@ -310,17 +306,35 @@ grid-template-columns:repeat(3,1fr);
 gap:18px;
 }
 
-.gallery-box{
-min-height:210px;
-border:1px dashed #555;
-border-radius:14px;
+.gallery-item{
 background:#101010;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#777;
-padding:20px;
+border:1px solid #303030;
+border-radius:14px;
+overflow:hidden;
+min-height:220px;
+}
+
+.gallery-item img,
+.gallery-item video{
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
+}
+
+.gallery-caption{
+padding:16px;
+}
+
+.gallery-caption h3{
+color:var(--lightgold);
+font-size:18px;
+margin-bottom:5px;
+}
+
+.gallery-caption p{
+color:#aaa;
+font-size:14px;
 }
 
 /* FAQ */
@@ -527,13 +541,11 @@ CREATE. CAPTURE. GROW.
 </a>
 
 <nav>
-
 <a href="#services">Services</a>
 <a href="#team">Team</a>
 <a href="#work">Our Work</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </div>
@@ -573,17 +585,13 @@ Helping individuals, entrepreneurs and small businesses build a stronger digital
 
 <div class="buttons">
 
-<a
-class="btn btn-gold"
-href="https://wa.me/27625636067"
->
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 WhatsApp Us
 </a>
 
-<a
-class="btn btn-dark"
-href="#services"
->
+<a class="btn btn-dark"
+href="#services">
 Explore Services
 </a>
 
@@ -602,9 +610,7 @@ Explore Services
 
 <div class="section-title">
 
-<h2>
-Our Services
-</h2>
+<h2>Our Services</h2>
 
 <p>
 Choose a service below to view details, starting prices and how to order.
@@ -612,183 +618,107 @@ Choose a service below to view details, starting prices and how to order.
 
 </div>
 
-
 <div class="grid">
 
-
 <div class="card service-card">
-
-<h3>
-Social Media Advertising
-</h3>
-
+<h3>Social Media Advertising</h3>
 <p>
 Promotional advert concepts, campaign graphics and social-media content support for businesses and brands.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('social');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('social');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-Graphic Design
-</h3>
-
+<h3>Graphic Design</h3>
 <p>
 Posters, flyers, social posts, adverts, menus and professional business graphics.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('graphic');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('graphic');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-Short-Form Video &amp; Reels
-</h3>
-
+<h3>Short-Form Video &amp; Reels</h3>
 <p>
 Short promotional videos and social-media reels for products, services and businesses.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('reels');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('reels');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-Branding &amp; Logo Design
-</h3>
-
+<h3>Branding &amp; Logo Design</h3>
 <p>
 Logo concepts, identity direction and starter branding materials for businesses and projects.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('branding');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('branding');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-Website Design
-</h3>
-
+<h3>Website Design</h3>
 <p>
 Professional websites for businesses, services, portfolios and personal brands.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('website');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('website');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-Digital Business Support
-</h3>
-
+<h3>Digital Business Support</h3>
 <p>
 Practical assistance with digital business tasks, documents and online setup.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('digital');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('digital');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-CV &amp; Job Application Support
-</h3>
-
+<h3>CV &amp; Job Application Support</h3>
 <p>
 CV preparation, cover letters, application assistance and professional formatting.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('cv');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('cv');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-Visa &amp; Permit Application Assistance
-</h3>
-
+<h3>Visa &amp; Permit Application Assistance</h3>
 <p>
 Administrative assistance with application files, document preparation and submission guidance.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('visa');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('visa');return false;">View Service</a>
 </div>
-
 </div>
 
 
 <div class="card service-card">
-
-<h3>
-Business Promotional Materials
-</h3>
-
+<h3>Business Promotional Materials</h3>
 <p>
 Business cards, menus, flyers, banners and promotional graphics for businesses and events.
 </p>
-
 <div class="service-button">
-<a href="#" onclick="openService('promo');return false;">
-View Service
-</a>
+<a href="#" onclick="openService('promo');return false;">View Service</a>
+</div>
 </div>
 
 </div>
-
-
-</div>
-
 </div>
 
 </section>
@@ -802,37 +732,38 @@ View Service
 
 <div class="section-title">
 
-<h2>
-Our Team
-</h2>
+<h2>Our Team</h2>
+
+<p>
+Meet the people behind Launch Lane Creative Media.
+</p>
 
 </div>
-
 
 <div class="team-layout">
 
+<!-- TEAM VIDEO -->
 
-<div class="photo-space">
-
-PHOTO SPACE<br>
-ADD PHOTO HERE LATER
-
-</div>
+<video
+class="team-video"
+controls
+playsinline
+preload="metadata"
+>
+<source src="team-llcm.mp4" type="video/mp4">
+Your browser does not support the video.
+</video>
 
 
 <div class="card team-card">
 
-<h3>
-MH Awan
-</h3>
+<h3>MH Awan</h3>
 
 <p class="role">
 CEO &amp; Founder
 </p>
 
-
 <hr class="team-divider">
-
 
 <h3>
 Taylor Robinson
@@ -847,7 +778,6 @@ Gauteng
 </p>
 
 </div>
-
 
 </div>
 
@@ -864,55 +794,155 @@ Gauteng
 
 <div class="section-title">
 
-<h2>
-Our Work
-</h2>
+<h2>Our Work</h2>
 
 <p>
-Gallery spaces are intentionally left ready for your posters, adverts, reels, branding and completed projects.
+A selection of creative, digital and promotional work by LLCM.
 </p>
 
 </div>
 
-
 <div class="gallery">
 
 
-<div class="gallery-box">
-POSTER / DESIGN<br>
-ADD IMAGE HERE
+<!-- REPLACE THESE IMAGE FILENAMES WITH YOUR UPLOADED FILE NAMES -->
+
+<div class="gallery-item">
+
+<img
+src="portfolio-1.jpg"
+alt="LLCM Graphic Design Work"
+>
+
+<div class="gallery-caption">
+
+<h3>
+Graphic Design
+</h3>
+
+<p>
+Posters, advertisements and business graphics.
+</p>
+
+</div>
+
 </div>
 
 
-<div class="gallery-box">
-SOCIAL MEDIA ADVERT<br>
-ADD IMAGE HERE
+<div class="gallery-item">
+
+<img
+src="portfolio-2.jpg"
+alt="LLCM Social Media Advertising"
+>
+
+<div class="gallery-caption">
+
+<h3>
+Social Media Advertising
+</h3>
+
+<p>
+Promotional social-media creative.
+</p>
+
+</div>
+
 </div>
 
 
-<div class="gallery-box">
-REEL / VIDEO<br>
-ADD VIDEO HERE
+<div class="gallery-item">
+
+<video controls playsinline preload="metadata">
+
+<source
+src="portfolio-video.mp4"
+type="video/mp4"
+>
+
+Your browser does not support the video.
+
+</video>
+
+<div class="gallery-caption">
+
+<h3>
+Reels &amp; Video
+</h3>
+
+<p>
+Short-form promotional video work.
+</p>
+
+</div>
+
 </div>
 
 
-<div class="gallery-box">
-BRANDING PROJECT<br>
-ADD IMAGE HERE
+<div class="gallery-item">
+
+<img
+src="portfolio-3.jpg"
+alt="LLCM Branding Project"
+>
+
+<div class="gallery-caption">
+
+<h3>
+Branding
+</h3>
+
+<p>
+Logo and brand identity projects.
+</p>
+
+</div>
+
 </div>
 
 
-<div class="gallery-box">
-WEBSITE PROJECT<br>
-ADD IMAGE HERE
+<div class="gallery-item">
+
+<img
+src="portfolio-4.jpg"
+alt="LLCM Website Design"
+>
+
+<div class="gallery-caption">
+
+<h3>
+Website Design
+</h3>
+
+<p>
+Business and digital website projects.
+</p>
+
+</div>
+
 </div>
 
 
-<div class="gallery-box">
-BUSINESS PROMOTIONAL WORK<br>
-ADD IMAGE HERE
+<div class="gallery-item">
+
+<img
+src="portfolio-5.jpg"
+alt="LLCM Promotional Materials"
+>
+
+<div class="gallery-caption">
+
+<h3>
+Business Promotional Work
+</h3>
+
+<p>
+Promotional materials for businesses and events.
+</p>
+
 </div>
 
+</div>
 
 </div>
 
@@ -935,9 +965,7 @@ Frequently Asked Questions
 
 </div>
 
-
 <div class="faq-grid">
-
 
 <div class="card">
 
@@ -990,7 +1018,6 @@ Yes. We can assist with administrative document and application preparation. Cli
 
 </div>
 
-
 </div>
 
 </div>
@@ -1016,39 +1043,32 @@ Ready to CREATE. CAPTURE. GROW.?
 
 </div>
 
-
 <div class="card contact-box">
-
 
 <p class="contact-line">
 <strong>WhatsApp:</strong>
 +27 62 563 6067
 </p>
 
-
 <p class="contact-line">
 <strong>Direct Call:</strong>
 +27 73 456 1486
 </p>
-
 
 <p class="contact-line">
 <strong>Email:</strong>
 llcmediaza@gmail.com
 </p>
 
-
 <p class="contact-line">
 <strong>Location:</strong>
 Gqeberha / Port Elizabeth, Eastern Cape
 </p>
 
-
 <p class="contact-line">
 <strong>Services:</strong>
 Online services across South Africa
 </p>
-
 
 <div class="buttons">
 
@@ -1060,7 +1080,6 @@ Start on WhatsApp
 </a>
 
 </div>
-
 
 </div>
 
@@ -1131,9 +1150,13 @@ Promotional advertising support designed to help businesses present their produc
 </p>
 
 <h4>Starting Price</h4>
-<div class="modal-price">From R275</div>
+
+<div class="modal-price">
+From R275
+</div>
 
 <h4>Services can include</h4>
+
 <ul>
 <li>Social media advert concepts</li>
 <li>Promotional graphics</li>
@@ -1142,7 +1165,8 @@ Promotional advertising support designed to help businesses present their produc
 <li>Social-media content support</li>
 </ul>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `,
@@ -1155,9 +1179,13 @@ Professional graphics for businesses, events, products and social media.
 </p>
 
 <h4>Starting Price</h4>
-<div class="modal-price">From R150</div>
+
+<div class="modal-price">
+From R150
+</div>
 
 <h4>Examples</h4>
+
 <ul>
 <li>Posters</li>
 <li>Flyers</li>
@@ -1167,7 +1195,8 @@ Professional graphics for businesses, events, products and social media.
 <li>Business graphics</li>
 </ul>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `,
@@ -1180,9 +1209,13 @@ Short promotional videos and social-media reels designed to showcase products, s
 </p>
 
 <h4>Starting Price</h4>
-<div class="modal-price">From R450</div>
+
+<div class="modal-price">
+From R450
+</div>
 
 <h4>Services can include</h4>
+
 <ul>
 <li>Short promotional videos</li>
 <li>Social media reels</li>
@@ -1191,7 +1224,8 @@ Short promotional videos and social-media reels designed to showcase products, s
 <li>Text and graphic elements</li>
 </ul>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `,
@@ -1204,9 +1238,13 @@ Build a stronger visual identity for your business with professional branding an
 </p>
 
 <h4>Starting Price</h4>
-<div class="modal-price">From R450</div>
+
+<div class="modal-price">
+From R450
+</div>
 
 <h4>Packages</h4>
+
 <ul>
 <li>Basic Logo — R450</li>
 <li>Pro Logo — R750</li>
@@ -1217,7 +1255,8 @@ Build a stronger visual identity for your business with professional branding an
 Final requirements and pricing can be discussed before work begins.
 </p>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `,
@@ -1241,7 +1280,8 @@ Professional websites for businesses, services, portfolios and personal brands.
 Custom requirements may receive a separate quote.
 </p>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `,
@@ -1254,9 +1294,13 @@ Practical assistance with digital business tasks, documents and online setup.
 </p>
 
 <h4>Starting Price</h4>
-<div class="modal-price">From R150</div>
+
+<div class="modal-price">
+From R150
+</div>
 
 <h4>Support can include</h4>
+
 <ul>
 <li>Digital document assistance</li>
 <li>Online setup support</li>
@@ -1265,7 +1309,8 @@ Practical assistance with digital business tasks, documents and online setup.
 <li>Practical online business assistance</li>
 </ul>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `,
@@ -1285,6 +1330,7 @@ Professional assistance with CVs, cover letters and job application documents.
 </ul>
 
 <h4>Support can include</h4>
+
 <ul>
 <li>CV formatting</li>
 <li>Professional presentation</li>
@@ -1293,7 +1339,8 @@ Professional assistance with CVs, cover letters and job application documents.
 <li>Document preparation</li>
 </ul>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `,
@@ -1307,9 +1354,12 @@ Administrative assistance with application files, document preparation and submi
 
 <h4>Pricing</h4>
 
-<div class="modal-price">Request Quote</div>
+<div class="modal-price">
+Request Quote
+</div>
 
 <h4>Assistance can include</h4>
+
 <ul>
 <li>Application file preparation</li>
 <li>Document organisation</li>
@@ -1322,7 +1372,8 @@ Administrative assistance with application files, document preparation and submi
 Clients remain responsible for providing accurate information and meeting the requirements of the relevant authority. LLCM does not guarantee approval.
 </p>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Request Assistance
 </a>
 `,
@@ -1335,9 +1386,13 @@ Professional promotional materials to help businesses advertise their products a
 </p>
 
 <h4>Starting Price</h4>
-<div class="modal-price">From R200</div>
+
+<div class="modal-price">
+From R200
+</div>
 
 <h4>Examples</h4>
+
 <ul>
 <li>Business cards</li>
 <li>Menus</li>
@@ -1347,7 +1402,8 @@ Professional promotional materials to help businesses advertise their products a
 <li>Business advertising materials</li>
 </ul>
 
-<a class="btn btn-gold" href="https://wa.me/27625636067">
+<a class="btn btn-gold"
+href="https://wa.me/27625636067">
 Order on WhatsApp
 </a>
 `
