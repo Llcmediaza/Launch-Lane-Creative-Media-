@@ -161,6 +161,7 @@ margin:6px;
 border-radius:8px;
 font-weight:800;
 border:1px solid var(--gold);
+cursor:pointer;
 }
 
 .btn-gold{
@@ -171,6 +172,10 @@ color:#080808;
 .btn-dark{
 background:#111;
 color:var(--lightgold);
+}
+
+.btn:hover{
+opacity:.88;
 }
 
 /* SECTIONS */
@@ -224,11 +229,30 @@ font-size:20px;
 color:#c9c9c9;
 }
 
-.price{
-font-size:22px;
-font-weight:900;
-color:#fff;
-margin:13px 0;
+.service-card{
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
+.service-card .service-button{
+margin-top:auto;
+padding-top:18px;
+}
+
+.service-button a{
+display:inline-block;
+padding:10px 17px;
+border:1px solid var(--gold);
+border-radius:7px;
+color:var(--lightgold);
+font-weight:bold;
+font-size:14px;
+}
+
+.service-button a:hover{
+background:var(--gold);
+color:#080808;
 }
 
 /* TEAM */
@@ -299,6 +323,14 @@ color:#777;
 padding:20px;
 }
 
+/* FAQ */
+
+.faq-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
 /* CONTACT */
 
 .contact-box{
@@ -323,6 +355,80 @@ padding:18px;
 border-radius:8px;
 color:#ccc;
 margin-top:25px;
+}
+
+/* SERVICE MODAL */
+
+.service-modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:1000;
+background:rgba(0,0,0,.82);
+padding:25px;
+overflow-y:auto;
+}
+
+.service-modal.active{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.modal-box{
+width:min(700px,100%);
+background:#111;
+border:1px solid var(--gold);
+border-radius:16px;
+padding:30px;
+position:relative;
+box-shadow:0 10px 50px rgba(0,0,0,.6);
+}
+
+.modal-close{
+position:absolute;
+top:12px;
+right:16px;
+background:none;
+border:0;
+color:#fff;
+font-size:30px;
+cursor:pointer;
+}
+
+.modal-box h2{
+color:var(--lightgold);
+font-size:30px;
+padding-right:35px;
+margin-bottom:12px;
+}
+
+.modal-box h4{
+color:var(--gold);
+font-size:19px;
+margin-top:22px;
+margin-bottom:8px;
+}
+
+.modal-box p{
+color:#d0d0d0;
+margin-bottom:10px;
+}
+
+.modal-box ul{
+margin:10px 0 10px 22px;
+color:#d0d0d0;
+}
+
+.modal-box li{
+margin:5px 0;
+}
+
+.modal-price{
+font-size:25px;
+font-weight:900;
+color:#fff;
+margin:15px 0;
 }
 
 /* FOOTER */
@@ -369,6 +475,10 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.faq-grid{
+grid-template-columns:1fr;
+}
+
 .hero{
 padding:65px 0;
 }
@@ -379,6 +489,10 @@ font-size:42px;
 
 section{
 padding:55px 0;
+}
+
+.modal-box{
+padding:24px 20px;
 }
 
 }
@@ -415,8 +529,6 @@ CREATE. CAPTURE. GROW.
 <nav>
 
 <a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#packages">Packages</a>
 <a href="#team">Team</a>
 <a href="#work">Our Work</a>
 <a href="#faq">FAQ</a>
@@ -495,7 +607,7 @@ Our Services
 </h2>
 
 <p>
-Creative, digital and practical business support from one place.
+Choose a service below to view details, starting prices and how to order.
 </p>
 
 </div>
@@ -504,75 +616,83 @@ Creative, digital and practical business support from one place.
 <div class="grid">
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Social Media Advertising
 </h3>
 
 <p>
-Promotional advert concepts, campaign graphics and social-media content support.
+Promotional advert concepts, campaign graphics and social-media content support for businesses and brands.
 </p>
 
-<div class="price">
-From R275
+<div class="service-button">
+<a href="#" onclick="openService('social');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Graphic Design
 </h3>
 
 <p>
-Posters, flyers, social posts, adverts, menus and business graphics.
+Posters, flyers, social posts, adverts, menus and professional business graphics.
 </p>
 
-<div class="price">
-From R150
+<div class="service-button">
+<a href="#" onclick="openService('graphic');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Short-Form Video &amp; Reels
 </h3>
 
 <p>
-Short promotional videos and social-media reels for products and services.
+Short promotional videos and social-media reels for products, services and businesses.
 </p>
 
-<div class="price">
-From R450
+<div class="service-button">
+<a href="#" onclick="openService('reels');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Branding &amp; Logo Design
 </h3>
 
 <p>
-Logo concepts, identity direction and starter branding materials.
+Logo concepts, identity direction and starter branding materials for businesses and projects.
 </p>
 
-<div class="price">
-From R450
+<div class="service-button">
+<a href="#" onclick="openService('branding');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Website Design
@@ -582,14 +702,16 @@ Website Design
 Professional websites for businesses, services, portfolios and personal brands.
 </p>
 
-<div class="price">
-From R1,500
+<div class="service-button">
+<a href="#" onclick="openService('website');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Digital Business Support
@@ -599,14 +721,16 @@ Digital Business Support
 Practical assistance with digital business tasks, documents and online setup.
 </p>
 
-<div class="price">
-From R150
+<div class="service-button">
+<a href="#" onclick="openService('digital');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 CV &amp; Job Application Support
@@ -616,14 +740,16 @@ CV &amp; Job Application Support
 CV preparation, cover letters, application assistance and professional formatting.
 </p>
 
-<div class="price">
-From R200
+<div class="service-button">
+<a href="#" onclick="openService('cv');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Visa &amp; Permit Application Assistance
@@ -633,174 +759,30 @@ Visa &amp; Permit Application Assistance
 Administrative assistance with application files, document preparation and submission guidance.
 </p>
 
-<div class="price">
-Request Quote
+<div class="service-button">
+<a href="#" onclick="openService('visa');return false;">
+View Service
+</a>
 </div>
 
 </div>
 
 
-<div class="card">
+<div class="card service-card">
 
 <h3>
 Business Promotional Materials
 </h3>
 
 <p>
-Business cards, menus, flyers, banners and promotional graphics.
+Business cards, menus, flyers, banners and promotional graphics for businesses and events.
 </p>
 
-<div class="price">
-From R200
+<div class="service-button">
+<a href="#" onclick="openService('promo');return false;">
+View Service
+</a>
 </div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRICING -->
-
-<section id="pricing" class="dark-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Starting Prices
-</h2>
-
-<p>
-Starting prices are shown below. Detailed projects may receive a custom quote.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-<div class="card">
-<h3>Social Media Advertising</h3>
-<div class="price">From R275</div>
-</div>
-
-<div class="card">
-<h3>Graphic Design</h3>
-<div class="price">From R150</div>
-</div>
-
-<div class="card">
-<h3>Reels</h3>
-<div class="price">From R450</div>
-</div>
-
-<div class="card">
-<h3>Branding &amp; Logo</h3>
-<div class="price">From R450</div>
-</div>
-
-<div class="card">
-<h3>Website Design</h3>
-<div class="price">From R1,500</div>
-</div>
-
-<div class="card">
-<h3>Digital Support</h3>
-<div class="price">From R150</div>
-</div>
-
-<div class="card">
-<h3>CV Support</h3>
-<div class="price">From R200</div>
-</div>
-
-<div class="card">
-<h3>Promotional Materials</h3>
-<div class="price">From R200</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PACKAGES -->
-
-<section id="packages">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Packages
-</h2>
-
-<p>
-Simple options for clients who want a clear starting point.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-
-<div class="card">
-
-<h3>
-Starter
-</h3>
-
-<div class="price">
-R350
-</div>
-
-<p>
-2 promotional social-media posts.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Grow
-</h3>
-
-<div class="price">
-R650
-</div>
-
-<p>
-One 15-second promotional advert/reel.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Bundle
-</h3>
-
-<div class="price">
-R1,305
-</div>
-
-<p>
-Bundle value R1,450, offered at a discounted starting price.
-</p>
 
 </div>
 
@@ -830,8 +812,6 @@ Our Team
 <div class="team-layout">
 
 
-<!-- EMPTY PHOTO SPACE -->
-
 <div class="photo-space">
 
 PHOTO SPACE<br>
@@ -839,8 +819,6 @@ ADD PHOTO HERE LATER
 
 </div>
 
-
-<!-- NAMES -->
 
 <div class="card team-card">
 
@@ -891,7 +869,7 @@ Our Work
 </h2>
 
 <p>
-Gallery spaces are intentionally left empty for your posters, adverts, reels, branding and completed projects.
+Gallery spaces are intentionally left ready for your posters, adverts, reels, branding and completed projects.
 </p>
 
 </div>
@@ -914,7 +892,7 @@ ADD IMAGE HERE
 
 <div class="gallery-box">
 REEL / VIDEO<br>
-ADD IMAGE HERE
+ADD VIDEO HERE
 </div>
 
 
@@ -958,7 +936,7 @@ Frequently Asked Questions
 </div>
 
 
-<div class="grid">
+<div class="faq-grid">
 
 
 <div class="card">
@@ -1123,6 +1101,302 @@ Online services across South Africa
 
 </footer>
 
+
+<!-- SERVICE DETAILS -->
+
+<div id="serviceModal" class="service-modal">
+
+<div class="modal-box">
+
+<button class="modal-close" onclick="closeService()">
+&times;
+</button>
+
+<div id="serviceContent"></div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const services = {
+
+social: `
+<h2>Social Media Advertising</h2>
+
+<p>
+Promotional advertising support designed to help businesses present their products and services professionally online.
+</p>
+
+<h4>Starting Price</h4>
+<div class="modal-price">From R275</div>
+
+<h4>Services can include</h4>
+<ul>
+<li>Social media advert concepts</li>
+<li>Promotional graphics</li>
+<li>Campaign creative</li>
+<li>Product and service promotions</li>
+<li>Social-media content support</li>
+</ul>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`,
+
+graphic: `
+<h2>Graphic Design</h2>
+
+<p>
+Professional graphics for businesses, events, products and social media.
+</p>
+
+<h4>Starting Price</h4>
+<div class="modal-price">From R150</div>
+
+<h4>Examples</h4>
+<ul>
+<li>Posters</li>
+<li>Flyers</li>
+<li>Social media posts</li>
+<li>Menus</li>
+<li>Promotional adverts</li>
+<li>Business graphics</li>
+</ul>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`,
+
+reels: `
+<h2>Short-Form Video &amp; Reels</h2>
+
+<p>
+Short promotional videos and social-media reels designed to showcase products, services and businesses.
+</p>
+
+<h4>Starting Price</h4>
+<div class="modal-price">From R450</div>
+
+<h4>Services can include</h4>
+<ul>
+<li>Short promotional videos</li>
+<li>Social media reels</li>
+<li>Product promotions</li>
+<li>Business promotional clips</li>
+<li>Text and graphic elements</li>
+</ul>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`,
+
+branding: `
+<h2>Branding &amp; Logo Design</h2>
+
+<p>
+Build a stronger visual identity for your business with professional branding and logo support.
+</p>
+
+<h4>Starting Price</h4>
+<div class="modal-price">From R450</div>
+
+<h4>Packages</h4>
+<ul>
+<li>Basic Logo — R450</li>
+<li>Pro Logo — R750</li>
+<li>Brand Starter — R1,200</li>
+</ul>
+
+<p>
+Final requirements and pricing can be discussed before work begins.
+</p>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`,
+
+website: `
+<h2>Website Design</h2>
+
+<p>
+Professional websites for businesses, services, portfolios and personal brands.
+</p>
+
+<h4>Starting Prices</h4>
+
+<ul>
+<li>One-page website — R1,500</li>
+<li>Business website — R2,500</li>
+<li>Multi-section website — R4,000</li>
+</ul>
+
+<p>
+Custom requirements may receive a separate quote.
+</p>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`,
+
+digital: `
+<h2>Digital Business Support</h2>
+
+<p>
+Practical assistance with digital business tasks, documents and online setup.
+</p>
+
+<h4>Starting Price</h4>
+<div class="modal-price">From R150</div>
+
+<h4>Support can include</h4>
+<ul>
+<li>Digital document assistance</li>
+<li>Online setup support</li>
+<li>Business information formatting</li>
+<li>Basic digital administration</li>
+<li>Practical online business assistance</li>
+</ul>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`,
+
+cv: `
+<h2>CV &amp; Job Application Support</h2>
+
+<p>
+Professional assistance with CVs, cover letters and job application documents.
+</p>
+
+<h4>Starting Prices</h4>
+
+<ul>
+<li>CV support — From R200</li>
+<li>CV + Cover Letter — R450</li>
+</ul>
+
+<h4>Support can include</h4>
+<ul>
+<li>CV formatting</li>
+<li>Professional presentation</li>
+<li>Cover letters</li>
+<li>Job application assistance</li>
+<li>Document preparation</li>
+</ul>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`,
+
+visa: `
+<h2>Visa &amp; Permit Application Assistance</h2>
+
+<p>
+Administrative assistance with application files, document preparation and submission guidance.
+</p>
+
+<h4>Pricing</h4>
+
+<div class="modal-price">Request Quote</div>
+
+<h4>Assistance can include</h4>
+<ul>
+<li>Application file preparation</li>
+<li>Document organisation</li>
+<li>Form-filling assistance</li>
+<li>Submission guidance</li>
+<li>Permit application and renewal assistance</li>
+</ul>
+
+<p>
+Clients remain responsible for providing accurate information and meeting the requirements of the relevant authority. LLCM does not guarantee approval.
+</p>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Request Assistance
+</a>
+`,
+
+promo: `
+<h2>Business Promotional Materials</h2>
+
+<p>
+Professional promotional materials to help businesses advertise their products and services.
+</p>
+
+<h4>Starting Price</h4>
+<div class="modal-price">From R200</div>
+
+<h4>Examples</h4>
+<ul>
+<li>Business cards</li>
+<li>Menus</li>
+<li>Flyers</li>
+<li>Banners</li>
+<li>Promotional graphics</li>
+<li>Business advertising materials</li>
+</ul>
+
+<a class="btn btn-gold" href="https://wa.me/27625636067">
+Order on WhatsApp
+</a>
+`
+
+};
+
+
+function openService(service){
+
+document.getElementById("serviceContent").innerHTML =
+services[service];
+
+document.getElementById("serviceModal")
+.classList.add("active");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeService(){
+
+document.getElementById("serviceModal")
+.classList.remove("active");
+
+document.body.style.overflow="";
+
+}
+
+
+document.getElementById("serviceModal")
+.addEventListener("click",function(event){
+
+if(event.target === this){
+closeService();
+}
+
+});
+
+
+document.addEventListener("keydown",function(event){
+
+if(event.key === "Escape"){
+closeService();
+}
+
+});
+
+</script>
 
 </body>
 </html>
