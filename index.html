@@ -9,7 +9,50 @@
 <meta name="description" content="Launch Lane Creative Media — Creative Media & Digital Services. CREATE. CAPTURE. GROW.">
 
 <style>
+/* TEAM SECTION IMPROVEMENT */
 
+.team-layout{
+grid-template-columns:1.35fr 0.85fr;
+gap:30px;
+align-items:stretch;
+}
+
+.team-video{
+min-height:420px;
+height:100%;
+object-fit:cover;
+}
+
+.team-card{
+min-height:420px;
+padding:35px 25px;
+}
+
+.team-card h3{
+font-size:26px;
+}
+
+.team-card .role{
+font-size:16px;
+}
+
+@media(max-width:800px){
+
+.team-layout{
+grid-template-columns:1fr;
+}
+
+.team-video{
+min-height:300px;
+height:300px;
+}
+
+.team-card{
+min-height:auto;
+padding:30px 20px;
+}
+
+}
 *{
 box-sizing:border-box;
 margin:0;
