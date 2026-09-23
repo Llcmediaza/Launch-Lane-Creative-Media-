@@ -6,11 +6,11 @@
 
 <title>Launch Lane Creative Media | LLCM</title>
 
-<meta name="description" content="Launch Lane Creative Media — Creative Media & Digital Services. CREATE. CAPTURE. GROW.">
+<meta name="description" content="Launch Lane Creative Media — Creative Media, Digital Services, LeDon Fashion Design and AI Courses. CREATE. CAPTURE. GROW.">
 
 <style>
 
-/* TEAM SECTION IMPROVEMENT */
+/* TEAM SECTION */
 
 .team-layout{
 grid-template-columns:1.35fr 0.85fr;
@@ -38,21 +38,17 @@ font-size:16px;
 }
 
 @media(max-width:800px){
-
 .team-layout{
 grid-template-columns:1fr;
 }
-
 .team-video{
 min-height:300px;
 height:300px;
 }
-
 .team-card{
 min-height:auto;
 padding:30px 20px;
 }
-
 }
 
 *{
@@ -299,7 +295,7 @@ background:var(--gold);
 color:#080808;
 }
 
-/* LE DON DESIGN BUTTON */
+/* LEDON */
 
 .ledon-card{
 border:1px solid var(--gold);
@@ -310,7 +306,7 @@ background:linear-gradient(145deg,#171717,#0e0e0e);
 color:var(--lightgold);
 }
 
-.ledon-card .ledon-label{
+.ledon-label{
 color:var(--gold);
 font-size:13px;
 font-weight:900;
@@ -332,10 +328,6 @@ background:var(--gold);
 color:#080808;
 font-weight:900;
 font-size:14px;
-}
-
-.ledon-button a:hover{
-opacity:.88;
 }
 
 /* TEAM */
@@ -419,6 +411,290 @@ margin-bottom:5px;
 .gallery-caption p{
 color:#aaa;
 font-size:14px;
+}
+
+/* LEDON DESIGN GALLERY */
+
+.fashion-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
+}
+
+.fashion-card{
+background:#101010;
+border:1px solid #333;
+border-radius:12px;
+overflow:hidden;
+}
+
+.fashion-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+display:block;
+}
+
+.fashion-card div{
+padding:12px;
+text-align:center;
+}
+
+.fashion-card h4{
+color:var(--lightgold);
+font-size:15px;
+}
+
+.fashion-card p{
+font-size:12px;
+color:#999;
+margin-top:4px;
+}
+
+.design-note{
+max-width:850px;
+margin:25px auto 0;
+text-align:center;
+color:#aaa;
+font-size:14px;
+}
+
+/* COURSE */
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.course-card{
+border:1px solid var(--gold);
+background:linear-gradient(145deg,#171717,#0d0d0d);
+}
+
+.course-card h3{
+font-size:25px;
+}
+
+.course-label{
+color:var(--gold);
+font-weight:900;
+letter-spacing:2px;
+font-size:13px;
+margin-bottom:8px;
+}
+
+.course-card ul{
+margin:15px 0 0 20px;
+color:#ccc;
+}
+
+.course-card li{
+margin:7px 0;
+}
+
+.course-button{
+margin-top:20px;
+}
+
+.course-button button{
+padding:12px 20px;
+border:1px solid var(--gold);
+border-radius:8px;
+background:var(--gold);
+color:#080808;
+font-weight:900;
+cursor:pointer;
+}
+
+.course-button button:hover{
+opacity:.88;
+}
+
+/* COURSE MODAL */
+
+.course-modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:1100;
+background:rgba(0,0,0,.88);
+padding:20px;
+overflow-y:auto;
+}
+
+.course-modal.active{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.course-box{
+width:min(850px,100%);
+max-height:92vh;
+overflow-y:auto;
+background:#111;
+border:1px solid var(--gold);
+border-radius:16px;
+padding:30px;
+position:relative;
+}
+
+.course-close{
+position:absolute;
+top:10px;
+right:15px;
+background:none;
+border:0;
+color:#fff;
+font-size:30px;
+cursor:pointer;
+}
+
+.course-box h2{
+color:var(--lightgold);
+font-size:30px;
+padding-right:35px;
+margin-bottom:15px;
+}
+
+.lesson{
+background:#181818;
+border:1px solid #333;
+border-radius:10px;
+padding:18px;
+margin:12px 0;
+}
+
+.lesson h3{
+color:var(--gold);
+margin-bottom:7px;
+}
+
+.lesson p{
+color:#ccc;
+}
+
+.exam-question{
+background:#181818;
+border:1px solid #333;
+border-radius:10px;
+padding:18px;
+margin:15px 0;
+}
+
+.exam-question strong{
+display:block;
+color:#fff;
+margin-bottom:10px;
+}
+
+.exam-question label{
+display:block;
+padding:6px 0;
+color:#ccc;
+}
+
+.exam-submit{
+padding:13px 22px;
+border:0;
+border-radius:8px;
+background:var(--gold);
+color:#080808;
+font-weight:900;
+cursor:pointer;
+margin-top:15px;
+}
+
+.result-box{
+display:none;
+margin-top:25px;
+padding:25px;
+border:1px solid var(--gold);
+border-radius:12px;
+text-align:center;
+background:#171717;
+}
+
+.result-box h3{
+color:var(--lightgold);
+font-size:26px;
+}
+
+.result-score{
+font-size:36px;
+font-weight:900;
+color:var(--gold);
+margin:10px 0;
+}
+
+/* CERTIFICATE */
+
+.certificate-wrap{
+display:none;
+margin-top:25px;
+}
+
+.certificate{
+background:#080808;
+border:5px double var(--gold);
+padding:35px 25px;
+text-align:center;
+border-radius:8px;
+position:relative;
+}
+
+.certificate:before{
+content:"";
+position:absolute;
+inset:10px;
+border:1px solid #6d5a25;
+pointer-events:none;
+}
+
+.certificate h2{
+font-size:32px;
+color:var(--lightgold);
+margin-bottom:5px;
+}
+
+.certificate h3{
+font-size:24px;
+color:#fff;
+margin:15px 0;
+}
+
+.certificate-course{
+font-size:20px;
+font-weight:bold;
+color:var(--gold);
+margin:12px 0;
+}
+
+.certificate p{
+color:#ccc;
+margin:6px 0;
+}
+
+.certificate-sign{
+margin-top:30px;
+display:flex;
+justify-content:space-around;
+gap:20px;
+}
+
+.sign-box{
+min-width:180px;
+border-top:1px solid #888;
+padding-top:7px;
+color:#ccc;
+font-size:13px;
+}
+
+.sign-placeholder{
+font-family:cursive;
+font-size:22px;
+color:var(--lightgold);
 }
 
 /* FAQ */
@@ -577,6 +853,18 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.course-grid{
+grid-template-columns:1fr;
+}
+
+.fashion-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.fashion-card img{
+height:230px;
+}
+
 .hero{
 padding:65px 0;
 }
@@ -589,8 +877,14 @@ section{
 padding:55px 0;
 }
 
-.modal-box{
+.modal-box,
+.course-box{
 padding:24px 20px;
+}
+
+.certificate-sign{
+flex-direction:column;
+align-items:center;
 }
 
 }
@@ -628,7 +922,8 @@ CREATE. CAPTURE. GROW.
 <a href="#services">Services</a>
 <a href="#team">Team</a>
 <a href="#work">Our Work</a>
-<a href="ledon-clothing-designs.html">LeDon — Your Designer</a>
+<a href="#ledon">LeDon</a>
+<a href="#courses">AI Courses</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -804,8 +1099,6 @@ Business cards, menus, flyers, banners and promotional graphics for businesses a
 </div>
 
 
-<!-- LE DON CLOTHING DESIGN -->
-
 <div class="card service-card ledon-card">
 
 <div class="ledon-label">
@@ -821,7 +1114,7 @@ Explore original clothing and fashion design concepts created by MH Awan through
 </p>
 
 <div class="ledon-button">
-<a href="ledon-clothing-designs.html">
+<a href="#ledon">
 View Clothing Designs
 </a>
 </div>
@@ -852,8 +1145,6 @@ Meet the people behind Launch Lane Creative Media.
 </div>
 
 <div class="team-layout">
-
-<!-- TEAM VIDEO -->
 
 <video
 class="team-video"
@@ -921,7 +1212,7 @@ A selection of creative, digital and promotional work by LLCM.
 <div class="gallery-item">
 
 <img
-src="portfolio-1.jpg"
+src="llcm-graphic-design.jpg"
 alt="LLCM Graphic Design Work"
 >
 
@@ -943,7 +1234,7 @@ Posters, advertisements and business graphics.
 <div class="gallery-item">
 
 <img
-src="portfolio-2.jpg"
+src="llcm-social-media.jpg"
 alt="LLCM Social Media Advertising"
 >
 
@@ -967,7 +1258,7 @@ Promotional social-media creative.
 <video controls playsinline preload="metadata">
 
 <source
-src="portfolio-video.mp4"
+src="llcm-reels-video.mp4"
 type="video/mp4"
 >
 
@@ -993,7 +1284,7 @@ Short-form promotional video work.
 <div class="gallery-item">
 
 <img
-src="portfolio-3.jpg"
+src="llcm-branding.jpg"
 alt="LLCM Branding Project"
 >
 
@@ -1015,7 +1306,7 @@ Logo and brand identity projects.
 <div class="gallery-item">
 
 <img
-src="portfolio-4.jpg"
+src="llcm-website-design.jpg"
 alt="LLCM Website Design"
 >
 
@@ -1037,7 +1328,7 @@ Business and digital website projects.
 <div class="gallery-item">
 
 <img
-src="portfolio-5.jpg"
+src="llcm-business-promo.jpg"
 alt="LLCM Promotional Materials"
 >
 
@@ -1062,503 +1353,41 @@ Promotional materials for businesses and events.
 </section>
 
 
-<!-- FAQ -->
+<!-- LEDON -->
 
-<section id="faq" class="dark-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Frequently Asked Questions
-</h2>
-
-</div>
-
-<div class="faq-grid">
-
-<div class="card">
-
-<h3>
-How do I order?
-</h3>
-
-<p>
-Send us a WhatsApp message describing what you need. We will discuss the project and provide a quote where required.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Are the prices fixed?
-</h3>
-
-<p>
-Prices shown are starting prices. Final pricing can depend on the size and requirements of the project.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Do you work outside Gqeberha?
-</h3>
-
-<p>
-Yes. LLCM offers online services across South Africa.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Can you help with applications?
-</h3>
-
-<p>
-Yes. We can assist with administrative document and application preparation. Clients remain responsible for the accuracy of their information.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
+<section id="ledon" class="dark-section">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>
-Contact LLCM
-</h2>
+<h2>LeDon — Your Designer</h2>
 
 <p>
-Ready to CREATE. CAPTURE. GROW.?
+Original clothing and fashion design concepts by MH Awan.
 </p>
 
 </div>
 
-<div class="card contact-box">
+<div class="card" style="text-align:center;margin-bottom:25px;">
 
-<p class="contact-line">
-<strong>WhatsApp:</strong>
-+27 62 563 6067
-</p>
-
-<p class="contact-line">
-<strong>Email:</strong>
-llcmediaza@gmail.com
-</p>
-
-<p class="contact-line">
-<strong>Location:</strong>
-Gqeberha / Port Elizabeth, Eastern Cape
-</p>
-
-<p class="contact-line">
-<strong>Services:</strong>
-Online services across South Africa
-</p>
-
-<div class="buttons">
-
-<a
-class="btn btn-gold"
-href="https://wa.me/27625636067"
->
-Start on WhatsApp
-</a>
-
+<div class="ledon-label">
+TURNING IDEAS INTO DESIGNS.
 </div>
 
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-<strong>
-Launch Lane Creative Media
-</strong>
-
-<br>
-
-CREATE. CAPTURE. GROW.
-
-<br><br>
-
-Gqeberha / Port Elizabeth, Eastern Cape
-
-<br>
-
-Online services across South Africa
-
-<br><br>
-
-&copy; 2026 Launch Lane Creative Media. All rights reserved.
-
-</div>
-
-</footer>
-
-
-<!-- SERVICE DETAILS -->
-
-<div id="serviceModal" class="service-modal">
-
-<div class="modal-box">
-
-<button class="modal-close" onclick="closeService()">
-&times;
-</button>
-
-<div id="serviceContent"></div>
-
-</div>
-
-</div>
-
-
-<script>
-
-const services = {
-
-social: `
-<h2>Social Media Advertising</h2>
+<h3>
+Designed by MH Awan
+</h3>
 
 <p>
-Promotional advertising support designed to help businesses present their products and services professionally online.
+LeDon focuses on original clothing and fashion design concepts for men and women. Designs are presented as previews and are intended for designers, factories, clothing companies and clients seeking original fashion concepts.
 </p>
 
-<h4>Starting Price</h4>
+<p style="margin-top:12px;">
+Preview images are for viewing only. High-resolution design files and detailed specifications can be supplied after an order is confirmed.
+</p>
 
-<div class="modal-price">
-From R275
 </div>
 
-<h4>Services can include</h4>
 
-<ul>
-<li>Social media advert concepts</li>
-<li>Promotional graphics</li>
-<li>Campaign creative</li>
-<li>Product and service promotions</li>
-<li>Social-media content support</li>
-</ul>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`,
-
-graphic: `
-<h2>Graphic Design</h2>
-
-<p>
-Professional graphics for businesses, events, products and social media.
-</p>
-
-<h4>Starting Price</h4>
-
-<div class="modal-price">
-From R150
-</div>
-
-<h4>Examples</h4>
-
-<ul>
-<li>Posters</li>
-<li>Flyers</li>
-<li>Social media posts</li>
-<li>Menus</li>
-<li>Promotional adverts</li>
-<li>Business graphics</li>
-</ul>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`,
-
-reels: `
-<h2>Short-Form Video &amp; Reels</h2>
-
-<p>
-Short promotional videos and social-media reels designed to showcase products, services and businesses.
-</p>
-
-<h4>Starting Price</h4>
-
-<div class="modal-price">
-From R450
-</div>
-
-<h4>Services can include</h4>
-
-<ul>
-<li>Short promotional videos</li>
-<li>Social media reels</li>
-<li>Product promotions</li>
-<li>Business promotional clips</li>
-<li>Text and graphic elements</li>
-</ul>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`,
-
-branding: `
-<h2>Branding &amp; Logo Design</h2>
-
-<p>
-Build a stronger visual identity for your business with professional branding and logo support.
-</p>
-
-<h4>Starting Price</h4>
-
-<div class="modal-price">
-From R450
-</div>
-
-<h4>Packages</h4>
-
-<ul>
-<li>Basic Logo — R450</li>
-<li>Pro Logo — R750</li>
-<li>Brand Starter — R1,200</li>
-</ul>
-
-<p>
-Final requirements and pricing can be discussed before work begins.
-</p>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`,
-
-website: `
-<h2>Website Design</h2>
-
-<p>
-Professional websites for businesses, services, portfolios and personal brands.
-</p>
-
-<h4>Starting Prices</h4>
-
-<ul>
-<li>One-page website — R1,500</li>
-<li>Business website — R2,500</li>
-<li>Multi-section website — R4,000</li>
-</ul>
-
-<p>
-Custom requirements may receive a separate quote.
-</p>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`,
-
-digital: `
-<h2>Digital Business Support</h2>
-
-<p>
-Practical assistance with digital business tasks, documents and online setup.
-</p>
-
-<h4>Starting Price</h4>
-
-<div class="modal-price">
-From R150
-</div>
-
-<h4>Support can include</h4>
-
-<ul>
-<li>Digital document assistance</li>
-<li>Online setup support</li>
-<li>Business information formatting</li>
-<li>Basic digital administration</li>
-<li>Practical online business assistance</li>
-</ul>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`,
-
-cv: `
-<h2>CV &amp; Job Application Support</h2>
-
-<p>
-Professional assistance with CVs, cover letters and job application documents.
-</p>
-
-<h4>Starting Prices</h4>
-
-<ul>
-<li>CV support — From R200</li>
-<li>CV + Cover Letter — R450</li>
-</ul>
-
-<h4>Support can include</h4>
-
-<ul>
-<li>CV formatting</li>
-<li>Professional presentation</li>
-<li>Cover letters</li>
-<li>Job application assistance</li>
-<li>Document preparation</li>
-</ul>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`,
-
-visa: `
-<h2>Visa &amp; Permit Application Assistance</h2>
-
-<p>
-Administrative assistance with application files, document preparation and submission guidance.
-</p>
-
-<h4>Pricing</h4>
-
-<div class="modal-price">
-Request Quote
-</div>
-
-<h4>Assistance can include</h4>
-
-<ul>
-<li>Application file preparation</li>
-<li>Document organisation</li>
-<li>Form-filling assistance</li>
-<li>Submission guidance</li>
-<li>Permit application and renewal assistance</li>
-</ul>
-
-<p>
-Clients remain responsible for providing accurate information and meeting the requirements of the relevant authority. LLCM does not guarantee approval.
-</p>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Request Assistance
-</a>
-`,
-
-promo: `
-<h2>Business Promotional Materials</h2>
-
-<p>
-Professional promotional materials to help businesses advertise their products and services.
-</p>
-
-<h4>Starting Price</h4>
-
-<div class="modal-price">
-From R200
-</div>
-
-<h4>Examples</h4>
-
-<ul>
-<li>Business cards</li>
-<li>Menus</li>
-<li>Flyers</li>
-<li>Banners</li>
-<li>Promotional graphics</li>
-<li>Business advertising materials</li>
-</ul>
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-Order on WhatsApp
-</a>
-`
-
-};
-
-
-function openService(service){
-
-document.getElementById("serviceContent").innerHTML =
-services[service];
-
-document.getElementById("serviceModal")
-.classList.add("active");
-
-document.body.style.overflow="hidden";
-
-}
-
-
-function closeService(){
-
-document.getElementById("serviceModal")
-.classList.remove("active");
-
-document.body.style.overflow="";
-
-}
-
-
-document.getElementById("serviceModal")
-.addEventListener("click",function(event){
-
-if(event.target === this){
-closeService();
-}
-
-});
-
-
-document.addEventListener("keydown",function(event){
-
-if(event.key === "Escape"){
-closeService();
-}
-
-});
-
-</script>
-
-</body>
-</html>
+<h3 style="color:var(--lightgold);margin:30px 0 
