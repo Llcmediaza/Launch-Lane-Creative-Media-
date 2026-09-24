@@ -3,1391 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Launch Lane Creative Media | LLCM</title>
-
-<meta name="description" content="Launch Lane Creative Media — Creative Media, Digital Services, LeDon Fashion Design and AI Courses. CREATE. CAPTURE. GROW.">
+<meta name="description" content="Launch Lane Creative Media — practical, affordable creative and digital services. CREATE. CAPTURE. GROW.">
 
 <style>
-
-/* TEAM SECTION */
-
-.team-layout{
-grid-template-columns:1.35fr 0.85fr;
-gap:30px;
-align-items:stretch;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#080808;color:#f5f5f5;line-height:1.6}
+header{background:#080808;border-bottom:1px solid #c9a227;padding:15px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:1000}
+.logo{width:75px;height:75px;object-fit:contain}
+.brand{color:#d4af37;font-size:24px;font-weight:bold}
+nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:14px}
+nav a:hover{color:#d4af37}
+.hero{text-align:center;padding:75px 6%;background:linear-gradient(#080808,#151515)}
+.hero img{width:115px;margin-bottom:15px}
+h1{color:#d4af37;font-size:42px;margin-bottom:8px}
+.tagline{color:#fff;font-size:20px;letter-spacing:3px;margin-bottom:20px}
+.hero p{max-width:800px;margin:0 auto 25px;color:#ccc}
+.btn{display:inline-block;background:#d4af37;color:#080808;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px}
+.btn:hover{background:#fff}
+section{padding:60px 6%;max-width:1200px;margin:auto}
+h2{text-align:center;color:#d4af37;font-size:32px;margin-bottom:30px}
+.about{text-align:center;color:#ccc;max-width:850px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#111;border:1px solid #6f5a18;border-radius:10px;padding:24px;text-align:center}
+.card h3{color:#d4af37;margin-bottom:10px}
+.card p{color:#ccc;font-size:14px}
+.card button{margin-top:18px;border:1px solid #d4af37;background:#d4af37;color:#080808;padding:10px 18px;border-radius:5px;font-weight:bold;cursor:pointer}
+.card button:hover{background:#fff}
+.price{color:#d4af37;font-weight:bold;margin-top:8px}
+.portfolio img{width:100%;height:210px;object-fit:cover;border-radius:8px;border:1px solid #6f5a18}
+video{width:100%;border-radius:8px;border:1px solid #6f5a18;background:#000}
+.ledon{background:#111;border:1px solid #d4af37;border-radius:12px;text-align:center;padding:35px}
+.ledon img{width:180px;max-width:70%;margin-bottom:15px}
+.ledon h3{color:#d4af37;font-size:28px}
+.team-card{text-align:center}
+.team-card img{width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+.contact{text-align:center}
+.contact p{margin:8px;color:#ccc}
+footer{text-align:center;border-top:1px solid #6f5a18;padding:25px;color:#aaa;font-size:13px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;padding:20px;overflow:auto}
+.modal-box{background:#111;border:1px solid #d4af37;border-radius:10px;max-width:600px;margin:8vh auto;padding:30px;position:relative}
+.modal-box h2{text-align:left;margin-bottom:15px}
+.modal-box p{color:#ccc;margin-bottom:12px}
+.close{position:absolute;right:18px;top:10px;color:#d4af37;font-size:30px;cursor:pointer}
+@media(max-width:700px){
+header{flex-wrap:wrap;justify-content:center}
+.logo{width:60px;height:60px}
+.brand{font-size:19px}
+nav{width:100%;text-align:center}
+nav a{font-size:12px;margin:0 4px}
+h1{font-size:30px}
+.tagline{font-size:15px}
+section{padding:45px 5%}
 }
-
-.team-video{
-min-height:420px;
-height:100%;
-object-fit:cover;
-}
-
-.team-card{
-min-height:420px;
-padding:35px 25px;
-}
-
-.team-card h3{
-font-size:26px;
-}
-
-.team-card .role{
-font-size:16px;
-}
-
-@media(max-width:800px){
-.team-layout{
-grid-template-columns:1fr;
-}
-.team-video{
-min-height:300px;
-height:300px;
-}
-.team-card{
-min-height:auto;
-padding:30px 20px;
-}
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#080808;
-color:#f5f5f5;
-line-height:1.6;
-}
-
-:root{
---gold:#D4AF37;
---lightgold:#F5D76E;
---black:#080808;
---card:#141414;
---border:#303030;
---muted:#b9b9b9;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-width:min(1120px,92%);
-margin:auto;
-}
-
-/* HEADER */
-
-header{
-background:#050505;
-border-bottom:1px solid #292929;
-position:sticky;
-top:0;
-z-index:100;
-}
-
-.nav{
-min-height:82px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:25px;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:14px;
-}
-
-.brand img{
-width:58px;
-height:58px;
-object-fit:contain;
-}
-
-.brand-name{
-font-size:clamp(21px,3vw,30px);
-font-weight:900;
-color:var(--lightgold);
-line-height:1.1;
-}
-
-.brand-tagline{
-font-size:11px;
-letter-spacing:3px;
-color:#ddd;
-margin-top:4px;
-}
-
-nav{
-display:flex;
-flex-wrap:wrap;
-gap:17px;
-}
-
-nav a{
-font-size:14px;
-font-weight:bold;
-color:#ddd;
-}
-
-nav a:hover{
-color:var(--lightgold);
-}
-
-/* HERO */
-
-.hero{
-padding:90px 0 80px;
-text-align:center;
-background:radial-gradient(circle at top,#211a09 0,#080808 55%);
-}
-
-.hero-logo{
-width:110px;
-height:110px;
-object-fit:contain;
-margin-bottom:15px;
-}
-
-.hero h1{
-font-size:clamp(42px,7vw,76px);
-line-height:1.05;
-color:var(--lightgold);
-font-weight:900;
-}
-
-.hero h2{
-font-size:clamp(20px,3vw,30px);
-margin-top:14px;
-color:#fff;
-}
-
-.tagline{
-font-size:16px;
-font-weight:900;
-letter-spacing:4px;
-color:var(--gold);
-margin:18px 0;
-}
-
-.hero p{
-max-width:760px;
-margin:auto;
-font-size:17px;
-color:#d5d5d5;
-}
-
-.buttons{
-margin-top:28px;
-}
-
-.btn{
-display:inline-block;
-padding:13px 23px;
-margin:6px;
-border-radius:8px;
-font-weight:800;
-border:1px solid var(--gold);
-cursor:pointer;
-}
-
-.btn-gold{
-background:var(--gold);
-color:#080808;
-}
-
-.btn-dark{
-background:#111;
-color:var(--lightgold);
-}
-
-.btn:hover{
-opacity:.88;
-}
-
-/* SECTIONS */
-
-section{
-padding:70px 0;
-}
-
-.dark-section{
-background:#0d0d0d;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:38px;
-}
-
-.section-title h2{
-font-size:34px;
-color:var(--lightgold);
-}
-
-.section-title p{
-color:var(--muted);
-max-width:760px;
-margin:8px auto 0;
-}
-
-/* CARDS */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.card{
-background:var(--card);
-border:1px solid var(--border);
-border-radius:14px;
-padding:24px;
-}
-
-.card h3{
-color:var(--lightgold);
-margin-bottom:9px;
-font-size:20px;
-}
-
-.card p{
-color:#c9c9c9;
-}
-
-.service-card{
-display:flex;
-flex-direction:column;
-height:100%;
-}
-
-.service-card .service-button{
-margin-top:auto;
-padding-top:18px;
-}
-
-.service-button a{
-display:inline-block;
-padding:10px 17px;
-border:1px solid var(--gold);
-border-radius:7px;
-color:var(--lightgold);
-font-weight:bold;
-font-size:14px;
-}
-
-.service-button a:hover{
-background:var(--gold);
-color:#080808;
-}
-
-/* LEDON */
-
-.ledon-card{
-border:1px solid var(--gold);
-background:linear-gradient(145deg,#171717,#0e0e0e);
-}
-
-.ledon-card h3{
-color:var(--lightgold);
-}
-
-.ledon-label{
-color:var(--gold);
-font-size:13px;
-font-weight:900;
-letter-spacing:2px;
-margin-bottom:8px;
-}
-
-.ledon-button{
-margin-top:auto;
-padding-top:18px;
-}
-
-.ledon-button a{
-display:inline-block;
-padding:11px 19px;
-border:1px solid var(--gold);
-border-radius:7px;
-background:var(--gold);
-color:#080808;
-font-weight:900;
-font-size:14px;
-}
-
-/* TEAM */
-
-.team-layout{
-display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:25px;
-align-items:stretch;
-}
-
-.team-video{
-width:100%;
-height:100%;
-min-height:350px;
-object-fit:cover;
-border-radius:14px;
-border:1px solid #6d5a25;
-background:#101010;
-display:block;
-}
-
-.team-card{
-text-align:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
-.team-card h3{
-font-size:25px;
-color:var(--lightgold);
-}
-
-.team-card .role{
-color:var(--gold);
-font-weight:bold;
-margin-top:5px;
-}
-
-.team-divider{
-border:0;
-border-top:1px solid #333;
-margin:25px 0;
-}
-
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.gallery-item{
-background:#101010;
-border:1px solid #303030;
-border-radius:14px;
-overflow:hidden;
-min-height:220px;
-}
-
-.gallery-item img,
-.gallery-item video{
-width:100%;
-height:240px;
-object-fit:cover;
-display:block;
-}
-
-.gallery-caption{
-padding:16px;
-}
-
-.gallery-caption h3{
-color:var(--lightgold);
-font-size:18px;
-margin-bottom:5px;
-}
-
-.gallery-caption p{
-color:#aaa;
-font-size:14px;
-}
-
-/* LEDON DESIGN GALLERY */
-
-.fashion-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:15px;
-}
-
-.fashion-card{
-background:#101010;
-border:1px solid #333;
-border-radius:12px;
-overflow:hidden;
-}
-
-.fashion-card img{
-width:100%;
-height:250px;
-object-fit:cover;
-display:block;
-}
-
-.fashion-card div{
-padding:12px;
-text-align:center;
-}
-
-.fashion-card h4{
-color:var(--lightgold);
-font-size:15px;
-}
-
-.fashion-card p{
-font-size:12px;
-color:#999;
-margin-top:4px;
-}
-
-.design-note{
-max-width:850px;
-margin:25px auto 0;
-text-align:center;
-color:#aaa;
-font-size:14px;
-}
-
-/* COURSE */
-
-.course-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
-}
-
-.course-card{
-border:1px solid var(--gold);
-background:linear-gradient(145deg,#171717,#0d0d0d);
-}
-
-.course-card h3{
-font-size:25px;
-}
-
-.course-label{
-color:var(--gold);
-font-weight:900;
-letter-spacing:2px;
-font-size:13px;
-margin-bottom:8px;
-}
-
-.course-card ul{
-margin:15px 0 0 20px;
-color:#ccc;
-}
-
-.course-card li{
-margin:7px 0;
-}
-
-.course-button{
-margin-top:20px;
-}
-
-.course-button button{
-padding:12px 20px;
-border:1px solid var(--gold);
-border-radius:8px;
-background:var(--gold);
-color:#080808;
-font-weight:900;
-cursor:pointer;
-}
-
-.course-button button:hover{
-opacity:.88;
-}
-
-/* COURSE MODAL */
-
-.course-modal{
-display:none;
-position:fixed;
-inset:0;
-z-index:1100;
-background:rgba(0,0,0,.88);
-padding:20px;
-overflow-y:auto;
-}
-
-.course-modal.active{
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.course-box{
-width:min(850px,100%);
-max-height:92vh;
-overflow-y:auto;
-background:#111;
-border:1px solid var(--gold);
-border-radius:16px;
-padding:30px;
-position:relative;
-}
-
-.course-close{
-position:absolute;
-top:10px;
-right:15px;
-background:none;
-border:0;
-color:#fff;
-font-size:30px;
-cursor:pointer;
-}
-
-.course-box h2{
-color:var(--lightgold);
-font-size:30px;
-padding-right:35px;
-margin-bottom:15px;
-}
-
-.lesson{
-background:#181818;
-border:1px solid #333;
-border-radius:10px;
-padding:18px;
-margin:12px 0;
-}
-
-.lesson h3{
-color:var(--gold);
-margin-bottom:7px;
-}
-
-.lesson p{
-color:#ccc;
-}
-
-.exam-question{
-background:#181818;
-border:1px solid #333;
-border-radius:10px;
-padding:18px;
-margin:15px 0;
-}
-
-.exam-question strong{
-display:block;
-color:#fff;
-margin-bottom:10px;
-}
-
-.exam-question label{
-display:block;
-padding:6px 0;
-color:#ccc;
-}
-
-.exam-submit{
-padding:13px 22px;
-border:0;
-border-radius:8px;
-background:var(--gold);
-color:#080808;
-font-weight:900;
-cursor:pointer;
-margin-top:15px;
-}
-
-.result-box{
-display:none;
-margin-top:25px;
-padding:25px;
-border:1px solid var(--gold);
-border-radius:12px;
-text-align:center;
-background:#171717;
-}
-
-.result-box h3{
-color:var(--lightgold);
-font-size:26px;
-}
-
-.result-score{
-font-size:36px;
-font-weight:900;
-color:var(--gold);
-margin:10px 0;
-}
-
-/* CERTIFICATE */
-
-.certificate-wrap{
-display:none;
-margin-top:25px;
-}
-
-.certificate{
-background:#080808;
-border:5px double var(--gold);
-padding:35px 25px;
-text-align:center;
-border-radius:8px;
-position:relative;
-}
-
-.certificate:before{
-content:"";
-position:absolute;
-inset:10px;
-border:1px solid #6d5a25;
-pointer-events:none;
-}
-
-.certificate h2{
-font-size:32px;
-color:var(--lightgold);
-margin-bottom:5px;
-}
-
-.certificate h3{
-font-size:24px;
-color:#fff;
-margin:15px 0;
-}
-
-.certificate-course{
-font-size:20px;
-font-weight:bold;
-color:var(--gold);
-margin:12px 0;
-}
-
-.certificate p{
-color:#ccc;
-margin:6px 0;
-}
-
-.certificate-sign{
-margin-top:30px;
-display:flex;
-justify-content:space-around;
-gap:20px;
-}
-
-.sign-box{
-min-width:180px;
-border-top:1px solid #888;
-padding-top:7px;
-color:#ccc;
-font-size:13px;
-}
-
-.sign-placeholder{
-font-family:cursive;
-font-size:22px;
-color:var(--lightgold);
-}
-
-/* FAQ */
-
-.faq-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-/* CONTACT */
-
-.contact-box{
-max-width:720px;
-margin:auto;
-text-align:center;
-}
-
-.contact-line{
-margin:10px 0;
-color:#ddd;
-}
-
-.contact-line strong{
-color:var(--gold);
-}
-
-.note{
-background:#111;
-border-left:3px solid var(--gold);
-padding:18px;
-border-radius:8px;
-color:#ccc;
-margin-top:25px;
-}
-
-/* SERVICE MODAL */
-
-.service-modal{
-display:none;
-position:fixed;
-inset:0;
-z-index:1000;
-background:rgba(0,0,0,.82);
-padding:25px;
-overflow-y:auto;
-}
-
-.service-modal.active{
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.modal-box{
-width:min(700px,100%);
-background:#111;
-border:1px solid var(--gold);
-border-radius:16px;
-padding:30px;
-position:relative;
-box-shadow:0 10px 50px rgba(0,0,0,.6);
-}
-
-.modal-close{
-position:absolute;
-top:12px;
-right:16px;
-background:none;
-border:0;
-color:#fff;
-font-size:30px;
-cursor:pointer;
-}
-
-.modal-box h2{
-color:var(--lightgold);
-font-size:30px;
-padding-right:35px;
-margin-bottom:12px;
-}
-
-.modal-box h4{
-color:var(--gold);
-font-size:19px;
-margin-top:22px;
-margin-bottom:8px;
-}
-
-.modal-box p{
-color:#d0d0d0;
-margin-bottom:10px;
-}
-
-.modal-box ul{
-margin:10px 0 10px 22px;
-color:#d0d0d0;
-}
-
-.modal-box li{
-margin:5px 0;
-}
-
-.modal-price{
-font-size:25px;
-font-weight:900;
-color:#fff;
-margin:15px 0;
-}
-
-/* FOOTER */
-
-footer{
-border-top:1px solid #292929;
-padding:35px 0;
-text-align:center;
-color:#888;
-}
-
-footer strong{
-color:var(--lightgold);
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-.nav{
-flex-direction:column;
-align-items:flex-start;
-padding:14px 0;
-}
-
-.brand img{
-width:50px;
-height:50px;
-}
-
-nav{
-gap:11px;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.team-layout{
-grid-template-columns:1fr;
-}
-
-.gallery{
-grid-template-columns:1fr;
-}
-
-.faq-grid{
-grid-template-columns:1fr;
-}
-
-.course-grid{
-grid-template-columns:1fr;
-}
-
-.fashion-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.fashion-card img{
-height:230px;
-}
-
-.hero{
-padding:65px 0;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-section{
-padding:55px 0;
-}
-
-.modal-box,
-.course-box{
-padding:24px 20px;
-}
-
-.certificate-sign{
-flex-direction:column;
-align-items:center;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-
-<div class="container nav">
-
-<a href="#home" class="brand">
-
-<img src="llcm-official-logo.png" alt="LLCM Logo">
-
-<div>
-
-<div class="brand-name">
-Launch Lane Creative Media
-</div>
-
-<div class="brand-tagline">
-CREATE. CAPTURE. GROW.
-</div>
-
-</div>
-
-</a>
-
+<img src="llcm-official-logo.png" alt="Launch Lane Creative Media Logo" class="logo">
+<div class="brand">Launch Lane Creative Media</div>
 <nav>
+<a href="#about">About</a>
 <a href="#services">Services</a>
-<a href="#team">Team</a>
 <a href="#work">Our Work</a>
 <a href="#ledon">LeDon</a>
-<a href="#courses">AI Courses</a>
-<a href="#faq">FAQ</a>
+<a href="#team">Team</a>
 <a href="#contact">Contact</a>
 </nav>
-
-</div>
-
 </header>
 
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="container">
-
-<img
-src="llcm-official-logo.png"
-alt="Launch Lane Creative Media Logo"
-class="hero-logo"
->
-
-<h1>
-Launch Lane Creative Media
-</h1>
-
-<h2>
-Creative Media &amp; Digital Services
-</h2>
-
-<div class="tagline">
-CREATE. CAPTURE. GROW.
-</div>
-
-<p>
-Helping individuals, entrepreneurs and small businesses build a stronger digital presence with practical, affordable creative and digital services.
-</p>
-
-<div class="buttons">
-
-<a class="btn btn-gold"
-href="https://wa.me/27625636067">
-WhatsApp Us
-</a>
-
-<a class="btn btn-dark"
-href="#services">
-Explore Services
-</a>
-
-</div>
-
-</div>
-
+<section class="hero">
+<img src="llcm-official-logo.png" alt="LLCM Logo">
+<h1>Launch Lane Creative Media</h1>
+<div class="tagline">CREATE. CAPTURE. GROW.</div>
+<p>Helping individuals, entrepreneurs and small businesses build a stronger digital presence with practical, affordable creative and digital services.</p>
+<a class="btn" href="https://wa.me/27625636067">WhatsApp Us</a>
+<a class="btn" href="#services">Explore Services</a>
 </section>
 
-
-<!-- SERVICES -->
+<section id="about">
+<h2>About LLCM</h2>
+<p class="about">Launch Lane Creative Media (LLCM) provides creative, digital and practical business support services across South Africa. Our goal is to help individuals, entrepreneurs and small businesses present themselves professionally and grow their ideas.</p>
+</section>
 
 <section id="services">
-
-<div class="container">
-
-<div class="section-title">
-
 <h2>Our Services</h2>
-
-<p>
-Choose a service below to view details, starting prices and how to order.
-</p>
-
-</div>
-
 <div class="grid">
 
-<div class="card service-card">
-<h3>Social Media Advertising</h3>
-<p>
-Promotional advert concepts, campaign graphics and social-media content support for businesses and brands.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('social');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>Graphic Design</h3>
-<p>
-Posters, flyers, social posts, adverts, menus and professional business graphics.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('graphic');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>Short-Form Video &amp; Reels</h3>
-<p>
-Short promotional videos and social-media reels for products, services and businesses.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('reels');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>Branding &amp; Logo Design</h3>
-<p>
-Logo concepts, identity direction and starter branding materials for businesses and projects.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('branding');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>Website Design</h3>
-<p>
-Professional websites for businesses, services, portfolios and personal brands.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('website');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>Digital Business Support</h3>
-<p>
-Practical assistance with digital business tasks, documents and online setup.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('digital');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>CV &amp; Job Application Support</h3>
-<p>
-CV preparation, cover letters, application assistance and professional formatting.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('cv');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>Visa &amp; Permit Application Assistance</h3>
-<p>
-Administrative assistance with application files, document preparation and submission guidance.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('visa');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card">
-<h3>Business Promotional Materials</h3>
-<p>
-Business cards, menus, flyers, banners and promotional graphics for businesses and events.
-</p>
-<div class="service-button">
-<a href="#" onclick="openService('promo');return false;">View Service</a>
-</div>
-</div>
-
-
-<div class="card service-card ledon-card">
-
-<div class="ledon-label">
-FASHION DESIGN
-</div>
-
-<h3>
-LeDon — Your Designer
-</h3>
-
-<p>
-Explore original clothing and fashion design concepts created by MH Awan through LeDon — Your Designer.
-</p>
-
-<div class="ledon-button">
-<a href="#ledon">
-View Clothing Designs
-</a>
-</div>
+<div class="card"><h3>Social Media Advertising</h3><p>Creative advertising support for social media campaigns.</p><button onclick="openModal('social')">View Service</button></div>
+<div class="card"><h3>Graphic Design</h3><p>Professional graphics for your personal or business needs.</p><button onclick="openModal('graphic')">View Service</button></div>
+<div class="card"><h3>Reels</h3><p>Short-form social media reel creation.</p><button onclick="openModal('reels')">View Service</button></div>
+<div class="card"><h3>Branding Packages</h3><p>Choose a branding package for your needs.</p><button onclick="openModal('branding')">View Service</button></div>
+<div class="card"><h3>Website Packages</h3><p>Professional website options for individuals and businesses.</p><button onclick="openModal('website')">View Service</button></div>
+<div class="card"><h3>Digital Services</h3><p>Practical digital assistance for everyday needs.</p><button onclick="openModal('digital')">View Service</button></div>
+<div class="card"><h3>CV & Cover Letter</h3><p>Professional CV and application documents.</p><button onclick="openModal('cv')">View Service</button></div>
+<div class="card"><h3>Business Packages</h3><p>Starter, Grow and Launch packages for businesses.</p><button onclick="openModal('packages')">View Service</button></div>
+<div class="card"><h3>Visa & Permit Administration</h3><p>Administrative assistance with visa and permit documentation.</p><button onclick="openModal('visa')">View Service</button></div>
+<div class="card"><h3>Business Promotional Materials</h3><p>Creative promotional materials to help present your business.</p><button onclick="openModal('promo')">View Service</button></div>
 
 </div>
-
-
-</div>
-</div>
-
 </section>
-
-
-<!-- TEAM -->
-
-<section id="team" class="dark-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Our Team</h2>
-
-<p>
-Meet the people behind Launch Lane Creative Media.
-</p>
-
-</div>
-
-<div class="team-layout">
-
-<video
-class="team-video"
-controls
-playsinline
-preload="metadata"
->
-
-<source src="team-llcm.mp4" type="video/mp4">
-Your browser does not support the video.
-
-</video>
-
-
-<div class="card team-card">
-
-<h3>MH Awan</h3>
-
-<p class="role">
-CEO &amp; Founder
-</p>
-
-<hr class="team-divider">
-
-<h3>
-Taylor Robinson
-</h3>
-
-<p class="role">
-Business Development Manager
-</p>
-
-<p>
-Gauteng
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- OUR WORK -->
 
 <section id="work">
-
-<div class="container">
-
-<div class="section-title">
-
 <h2>Our Work</h2>
-
-<p>
-A selection of creative, digital and promotional work by LLCM.
-</p>
-
+<div class="grid portfolio">
+<div class="card"><img src="portfolio-1.jpg" alt="LLCM Portfolio 1"></div>
+<div class="card"><img src="portfolio-2.jpg" alt="LLCM Portfolio 2"></div>
+<div class="card"><img src="portfolio-3.jpg" alt="LLCM Portfolio 3"></div>
+<div class="card"><img src="portfolio-4.jpg" alt="LLCM Portfolio 4"></div>
+<div class="card"><img src="portfolio-5.jpg" alt="LLCM Portfolio 5"></div>
+<div class="card"><video controls poster="portfolio-1.jpg"><source src="portfolio-video.mp4" type="video/mp4"></video></div>
 </div>
-
-<div class="gallery">
-
-
-<div class="gallery-item">
-
-<img
-src="llcm-graphic-design.jpg"
-alt="LLCM Graphic Design Work"
->
-
-<div class="gallery-caption">
-
-<h3>
-Graphic Design
-</h3>
-
-<p>
-Posters, advertisements and business graphics.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="llcm-social-media.jpg"
-alt="LLCM Social Media Advertising"
->
-
-<div class="gallery-caption">
-
-<h3>
-Social Media Advertising
-</h3>
-
-<p>
-Promotional social-media creative.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<video controls playsinline preload="metadata">
-
-<source
-src="llcm-reels-video.mp4"
-type="video/mp4"
->
-
-Your browser does not support the video.
-
-</video>
-
-<div class="gallery-caption">
-
-<h3>
-Reels &amp; Video
-</h3>
-
-<p>
-Short-form promotional video work.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="llcm-branding.jpg"
-alt="LLCM Branding Project"
->
-
-<div class="gallery-caption">
-
-<h3>
-Branding
-</h3>
-
-<p>
-Logo and brand identity projects.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="llcm-website-design.jpg"
-alt="LLCM Website Design"
->
-
-<div class="gallery-caption">
-
-<h3>
-Website Design
-</h3>
-
-<p>
-Business and digital website projects.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="gallery-item">
-
-<img
-src="llcm-business-promo.jpg"
-alt="LLCM Promotional Materials"
->
-
-<div class="gallery-caption">
-
-<h3>
-Business Promotional Work
-</h3>
-
-<p>
-Promotional materials for businesses and events.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
+<section id="ledon">
+<div class="ledon">
+<img src="ledon-logo.png" alt="LeDon Your Designer Logo">
+<h3>LeDon — Your Designer</h3>
+<p>TURNING IDEAS INTO DESIGNS.</p>
+<p>Clothing and fashion design concepts created with attention to style, detail, materials and presentation.</p>
+<a class="btn" href="ledon-clothing-designs.html">Explore LeDon Designs</a>
+<p style="font-size:12px;margin-top:18px">© LeDon. Original design concepts and creative content are protected. No copying, reproduction or resale without permission.</p>
+</div>
+</section>
 
-<!-- LEDON -->
+<section id="ai">
+<h2>AI POWER</h2>
+<div class="card">
+<h3>AI POWER: The Complete Practical AI Course</h3>
+<p>Learn AI. Work Smarter. Build More.</p>
+<p>Practical AI skills for study, work, jobs and business, including AI-assisted presentations and PowerPoint creation.</p>
+</div>
+</section>
 
-<section id="ledon" class="dark-section">
+<section id="team">
+<h2>Our Team</h2>
+<div class="grid">
+<div class="card team-card">
+<h3>MH Awan</h3>
+<p>CEO & Founder</p>
+</div>
+<div class="card team-card">
+<h3>Taylor Robinson</h3>
+<p>Business Development Manager — Gauteng</p>
+</div>
+<div class="card">
+<video controls><source src="team-llcm.mp4" type="video/mp4"></video>
+</div>
+</div>
+</section>
 
-<div class="container">
+<section id="contact">
+<h2>Contact LLCM</h2>
+<div class="contact">
+<p><strong>Launch Lane Creative Media</strong></p>
+<p>Gqeberha / Port Elizabeth, Eastern Cape, South Africa</p>
+<p>Serving clients across South Africa online.</p>
+<p>Email: llcmediaza@gmail.com</p>
+<a class="btn" href="https://wa.me/27625636067">Chat on WhatsApp</a>
+</div>
+</section>
 
-<div class="section-title">
+<footer>
+<p>© 2026 Launch Lane Creative Media (LLCM). All Rights Reserved.</p>
+<p>Website content, graphics, original designs, branding and media are protected. Permission is required for copying, reproduction or resale.</p>
+</footer>
 
-<h2>LeDon — Your Designer</h2>
-
-<p>
-Original clothing and fashion design concepts by MH Awan.
-</p>
-
+<div id="modal" class="modal" onclick="closeOutside(event)">
+<div class="modal-box">
+<span class="close" onclick="closeModal()">&times;</span>
+<h2 id="modalTitle"></h2>
+<div id="modalContent"></div>
+</div>
 </div>
 
-<div class="card" style="text-align:center;margin-bottom:25px;">
+<script>
+const services={
+social:["Social Media Advertising","Creative social media advertising support.","R275"],
+graphic:["Graphic Design","Professional graphic design for personal and business requirements.","R150"],
+reels:["Reels","Short-form social media reel creation.","R450"],
+branding:["Branding Packages","Choose the package that suits your needs:<br><br>Basic Branding — <strong>R450</strong><br>Professional Branding — <strong>R750</strong><br>Complete Branding — <strong>R1200</strong>"],
+website:["Website Packages","Choose a website package:<br><br>Starter Website — <strong>R1500</strong><br>Professional Website — <strong>R2500</strong><br>Complete Website — <strong>R4000</strong>"],
+digital:["Digital Services","Digital assistance options:<br><br>Basic Digital Service — <strong>R150</strong><br>Advanced Digital Service — <strong>R250</strong>"],
+cv:["CV & Cover Letter","Professional CV — <strong>R200</strong><br><br>CV + Cover Letter — <strong>R450</strong>"],
+packages:["Business Packages","Starter — <strong>R350</strong><br>Grow — <strong>R650</strong><br>Launch — <strong>R1450</strong><br><br>Launch promotional price: <strong>R1305</strong>"],
+visa:["Visa & Permit Administration","Administrative assistance with visa and permit documentation for South Africa and other countries. LLCM provides administrative support only and does not provide legal or immigration advice."],
+promo:["Business Promotional Materials","Creative promotional materials for businesses. Contact LLCM for your requirements and a suitable quotation."]
+};
 
-<div class="ledon-label">
-TURNING IDEAS INTO DESIGNS.
-</div>
+function openModal(id){
+document.getElementById("modalTitle").textContent=services[id][0];
+let data=services[id];
+document.getElementById("modalContent").innerHTML="<p>"+data[1]+"</p>"+(data[2]?"<p class='price'>Price: "+data[2]+"</p>":"")+"<a class='btn' href='https://wa.me/27625636067'>Request This Service</a>";
+document.getElementById("modal").style.display="block";
+}
+function closeModal(){document.getElementById("modal").style.display="none"}
+function closeOutside(e){if(e.target.id==="modal")closeModal()}
+</script>
 
-<h3>
-Designed by MH Awan
-</h3>
-
-<p>
-LeDon focuses on original clothing and fashion design concepts for men and women. Designs are presented as previews and are intended for designers, factories, clothing companies and clients seeking original fashion concepts.
-</p>
-
-<p style="margin-top:12px;">
-Preview images are for viewing only. High-resolution design files and detailed specifications can be supplied after an order is confirmed.
-</p>
-
-</div>
-
-
-<h3 style="color:var(--lightgold);margin:30px 0 
+</body>
+</html>
