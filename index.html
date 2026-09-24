@@ -9,53 +9,386 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#080808;color:#f5f5f5;line-height:1.6}
-header{background:#080808;border-bottom:1px solid #c9a227;padding:15px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:1000}
+body{
+font-family:Arial,sans-serif;
+background:#080808;
+color:#f5f5f5;
+line-height:1.65;
+font-size:16px
+}
+
+/* PREMIUM GOLD - MATCHED TO LEDON STYLE */
+:root{
+--gold:#D4AF37;
+--gold-light:#E6C65C;
+--gold-dark:#9F7F18;
+--black:#080808;
+--card:#111;
+--text:#f5f5f5;
+--muted:#d0d0d0
+}
+
+header{
+background:#080808;
+border-bottom:1px solid var(--gold);
+padding:15px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+position:sticky;
+top:0;
+z-index:1000
+}
+
 .logo{width:75px;height:75px;object-fit:contain}
-.brand{color:#d4af37;font-size:24px;font-weight:bold}
-nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:14px}
-nav a:hover{color:#d4af37}
-.hero{text-align:center;padding:75px 6%;background:linear-gradient(#080808,#151515)}
+.brand{color:var(--gold);font-size:24px;font-weight:bold}
+nav a{
+color:#fff;
+text-decoration:none;
+margin:0 8px;
+font-size:15px
+}
+nav a:hover{color:var(--gold)}
+
+.hero{
+text-align:center;
+padding:75px 6%;
+background:linear-gradient(#080808,#151515)
+}
 .hero img{width:115px;margin-bottom:15px}
-h1{color:#d4af37;font-size:42px;margin-bottom:8px}
-.tagline{color:#fff;font-size:20px;letter-spacing:3px;margin-bottom:20px}
-.hero p{max-width:800px;margin:0 auto 25px;color:#ccc}
-.btn{display:inline-block;background:#d4af37;color:#080808;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px}
+h1{
+color:var(--gold);
+font-size:42px;
+margin-bottom:8px
+}
+.tagline{
+color:#fff;
+font-size:20px;
+letter-spacing:3px;
+margin-bottom:20px
+}
+.hero p{
+max-width:800px;
+margin:0 auto 25px;
+color:#ccc;
+font-size:17px
+}
+
+.btn{
+display:inline-block;
+background:var(--gold);
+color:#080808;
+padding:13px 23px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+margin:5px
+}
 .btn:hover{background:#fff}
-section{padding:60px 6%;max-width:1200px;margin:auto}
-h2{text-align:center;color:#d4af37;font-size:32px;margin-bottom:30px}
-.about{text-align:center;color:#ccc;max-width:850px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:#111;border:1px solid #6f5a18;border-radius:10px;padding:24px;text-align:center}
-.card h3{color:#d4af37;margin-bottom:10px}
-.card p{color:#ccc;font-size:14px}
-.card button{margin-top:18px;border:1px solid #d4af37;background:#d4af37;color:#080808;padding:10px 18px;border-radius:5px;font-weight:bold;cursor:pointer}
+
+section{
+padding:65px 6%;
+max-width:1200px;
+margin:auto
+}
+
+h2{
+text-align:center;
+color:var(--gold);
+font-size:34px;
+margin-bottom:32px
+}
+
+.about{
+text-align:center;
+color:#ccc;
+max-width:850px;
+margin:auto;
+font-size:17px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px
+}
+
+.card{
+background:#111;
+border:1px solid #6f5a18;
+border-radius:10px;
+padding:26px;
+text-align:center
+}
+
+.card h3{
+color:var(--gold);
+margin-bottom:12px;
+font-size:20px
+}
+
+.card p{
+color:#ccc;
+font-size:16px
+}
+
+.card button{
+margin-top:18px;
+border:1px solid var(--gold);
+background:var(--gold);
+color:#080808;
+padding:11px 19px;
+border-radius:5px;
+font-weight:bold;
+font-size:15px;
+cursor:pointer
+}
+
 .card button:hover{background:#fff}
-.price{color:#d4af37;font-weight:bold;margin-top:8px}
-.portfolio img{width:100%;height:210px;object-fit:cover;border-radius:8px;border:1px solid #6f5a18}
-video{width:100%;border-radius:8px;border:1px solid #6f5a18;background:#000}
-.ledon{background:#111;border:1px solid #d4af37;border-radius:12px;text-align:center;padding:35px}
-.ledon img{width:180px;max-width:70%;margin-bottom:15px}
-.ledon h3{color:#d4af37;font-size:28px}
+
+.price{
+color:var(--gold);
+font-weight:bold;
+margin-top:12px;
+font-size:19px
+}
+
+/* GALLERIES */
+.gallery-heading{
+text-align:center;
+color:#ccc;
+font-size:17px;
+max-width:800px;
+margin:-15px auto 28px
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px
+}
+
+.gallery-card{
+background:#111;
+border:1px solid #6f5a18;
+border-radius:10px;
+padding:10px;
+overflow:hidden
+}
+
+.gallery-card img,
+.gallery-card video{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:7px;
+display:block;
+background:#000
+}
+
+.gallery-empty{
+grid-column:1/-1;
+text-align:center;
+padding:30px;
+color:#aaa;
+border:1px dashed #6f5a18;
+border-radius:10px
+}
+
+/* LEDON */
+.ledon{
+background:#111;
+border:1px solid var(--gold);
+border-radius:12px;
+text-align:center;
+padding:38px
+}
+
+.ledon img{
+width:180px;
+max-width:70%;
+margin-bottom:15px
+}
+
+.ledon h3{
+color:var(--gold);
+font-size:29px
+}
+
+.ledon p{
+font-size:17px;
+color:#ccc;
+margin-top:8px
+}
+
+/* TEAM */
 .team-card{text-align:center}
-.team-card img{width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+
+.team-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:12px
+}
+
+.team-video{
+width:100%;
+border-radius:8px;
+border:1px solid #6f5a18;
+background:#000
+}
+
+.future-team{
+margin-top:25px;
+text-align:center;
+color:#aaa;
+font-size:14px
+}
+
 .contact{text-align:center}
-.contact p{margin:8px;color:#ccc}
-footer{text-align:center;border-top:1px solid #6f5a18;padding:25px;color:#aaa;font-size:13px}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;padding:20px;overflow:auto}
-.modal-box{background:#111;border:1px solid #d4af37;border-radius:10px;max-width:600px;margin:8vh auto;padding:30px;position:relative}
-.modal-box h2{text-align:left;margin-bottom:15px}
-.modal-box p{color:#ccc;margin-bottom:12px}
-.close{position:absolute;right:18px;top:10px;color:#d4af37;font-size:30px;cursor:pointer}
+.contact p{
+margin:9px;
+color:#ccc;
+font-size:16px
+}
+
+footer{
+text-align:center;
+border-top:1px solid #6f5a18;
+padding:25px;
+color:#aaa;
+font-size:14px
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.88);
+z-index:2000;
+padding:20px;
+overflow:auto
+}
+
+.modal-box{
+background:#111;
+border:1px solid var(--gold);
+border-radius:10px;
+max-width:650px;
+margin:8vh auto;
+padding:34px;
+position:relative
+}
+
+.modal-box h2{
+text-align:left;
+margin-bottom:18px;
+font-size:29px
+}
+
+.modal-box p{
+color:#ddd;
+margin-bottom:15px;
+font-size:18px;
+line-height:1.7
+}
+
+.modal-box strong{color:var(--gold)}
+
+.close{
+position:absolute;
+right:18px;
+top:10px;
+color:var(--gold);
+font-size:32px;
+cursor:pointer
+}
+
 @media(max-width:700px){
-header{flex-wrap:wrap;justify-content:center}
+
+header{
+flex-wrap:wrap;
+justify-content:center;
+padding:12px 4%
+}
+
 .logo{width:60px;height:60px}
 .brand{font-size:19px}
-nav{width:100%;text-align:center}
-nav a{font-size:12px;margin:0 4px}
-h1{font-size:30px}
+
+nav{
+width:100%;
+text-align:center
+}
+
+nav a{
+font-size:14px;
+margin:0 4px;
+display:inline-block;
+padding:3px
+}
+
+h1{font-size:31px}
 .tagline{font-size:15px}
-section{padding:45px 5%}
+.hero p{font-size:16px}
+
+section{
+padding:50px 5%
+}
+
+h2{
+font-size:29px;
+margin-bottom:28px
+}
+
+.about{font-size:16px}
+
+.grid,
+.gallery{
+grid-template-columns:1fr;
+gap:18px
+}
+
+.card{
+padding:23px
+}
+
+.card h3{font-size:20px}
+.card p{font-size:16px}
+
+.gallery-card img,
+.gallery-card video{
+height:250px
+}
+
+.modal{
+padding:12px
+}
+
+.modal-box{
+margin:5vh auto;
+padding:28px 22px
+}
+
+.modal-box h2{font-size:26px}
+.modal-box p{font-size:17px}
+.price{font-size:20px}
+
+.ledon{
+padding:30px 20px
+}
+
+.ledon h3{font-size:26px}
+.ledon p{font-size:16px}
+}
+
+/* EXTRA SMALL PHONES */
+@media(max-width:380px){
+nav a{font-size:13px;margin:0 2px}
+h1{font-size:27px}
+.tagline{font-size:13px}
 }
 </style>
 </head>
@@ -86,78 +419,171 @@ section{padding:45px 5%}
 
 <section id="about">
 <h2>About LLCM</h2>
-<p class="about">Launch Lane Creative Media (LLCM) provides creative, digital and practical business support services across South Africa. Our goal is to help individuals, entrepreneurs and small businesses present themselves professionally and grow their ideas.</p>
+<p class="about">
+Launch Lane Creative Media (LLCM) provides creative, digital and practical business support services across South Africa. Our goal is to help individuals, entrepreneurs and small businesses present themselves professionally and grow their ideas.
+</p>
 </section>
 
 <section id="services">
 <h2>Our Services</h2>
+
 <div class="grid">
 
-<div class="card"><h3>Social Media Advertising</h3><p>Creative advertising support for social media campaigns.</p><button onclick="openModal('social')">View Service</button></div>
-<div class="card"><h3>Graphic Design</h3><p>Professional graphics for your personal or business needs.</p><button onclick="openModal('graphic')">View Service</button></div>
-<div class="card"><h3>Reels</h3><p>Short-form social media reel creation.</p><button onclick="openModal('reels')">View Service</button></div>
-<div class="card"><h3>Branding Packages</h3><p>Choose a branding package for your needs.</p><button onclick="openModal('branding')">View Service</button></div>
-<div class="card"><h3>Website Packages</h3><p>Professional website options for individuals and businesses.</p><button onclick="openModal('website')">View Service</button></div>
-<div class="card"><h3>Digital Services</h3><p>Practical digital assistance for everyday needs.</p><button onclick="openModal('digital')">View Service</button></div>
-<div class="card"><h3>CV & Cover Letter</h3><p>Professional CV and application documents.</p><button onclick="openModal('cv')">View Service</button></div>
-<div class="card"><h3>Business Packages</h3><p>Starter, Grow and Launch packages for businesses.</p><button onclick="openModal('packages')">View Service</button></div>
-<div class="card"><h3>Visa & Permit Administration</h3><p>Administrative assistance with visa and permit documentation.</p><button onclick="openModal('visa')">View Service</button></div>
-<div class="card"><h3>Business Promotional Materials</h3><p>Creative promotional materials to help present your business.</p><button onclick="openModal('promo')">View Service</button></div>
+<div class="card">
+<h3>Social Media Advertising</h3>
+<p>Creative advertising support for social media campaigns.</p>
+<button onclick="openModal('social')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Graphic Design</h3>
+<p>Professional graphics for your personal or business needs.</p>
+<button onclick="openModal('graphic')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Reels</h3>
+<p>Short-form social media reel creation.</p>
+<button onclick="openModal('reels')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Branding Packages</h3>
+<p>Choose a branding package for your needs.</p>
+<button onclick="openModal('branding')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Website Packages</h3>
+<p>Professional website options for individuals and businesses.</p>
+<button onclick="openModal('website')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Digital Services</h3>
+<p>Practical digital assistance for everyday needs.</p>
+<button onclick="openModal('digital')">View Service</button>
+</div>
+
+<div class="card">
+<h3>CV & Cover Letter</h3>
+<p>Professional CV and application documents.</p>
+<button onclick="openModal('cv')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Business Packages</h3>
+<p>Starter, Grow and Launch packages for businesses.</p>
+<button onclick="openModal('packages')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Visa & Permit Administration</h3>
+<p>Administrative assistance with visa and permit documentation.</p>
+<button onclick="openModal('visa')">View Service</button>
+</div>
+
+<div class="card">
+<h3>Business Promotional Materials</h3>
+<p>Creative promotional materials to help present your business.</p>
+<button onclick="openModal('promo')">View Service</button>
+</div>
 
 </div>
 </section>
 
+<!-- LLCM DESIGNS GALLERY -->
 <section id="work">
-<h2>Our Work</h2>
-<div class="grid portfolio">
-<div class="card"><img src="portfolio-1.jpg" alt="LLCM Portfolio 1"></div>
-<div class="card"><img src="portfolio-2.jpg" alt="LLCM Portfolio 2"></div>
-<div class="card"><img src="portfolio-3.jpg" alt="LLCM Portfolio 3"></div>
-<div class="card"><img src="portfolio-4.jpg" alt="LLCM Portfolio 4"></div>
-<div class="card"><img src="portfolio-5.jpg" alt="LLCM Portfolio 5"></div>
-<div class="card"><video controls poster="portfolio-1.jpg"><source src="portfolio-video.mp4" type="video/mp4"></video></div>
+<h2>LLCM Designs Gallery</h2>
+<p class="gallery-heading">
+Our creative work, designs, promotional materials and media are displayed here.
+</p>
+
+<div id="llcmGallery" class="gallery">
+<div class="gallery-empty">Loading LLCM Designs...</div>
 </div>
 </section>
 
+<!-- LEDON -->
 <section id="ledon">
 <div class="ledon">
+
 <img src="ledon-logo.png" alt="LeDon Your Designer Logo">
+
 <h3>LeDon — Your Designer</h3>
-<p>TURNING IDEAS INTO DESIGNS.</p>
-<p>Clothing and fashion design concepts created with attention to style, detail, materials and presentation.</p>
+
+<p><strong>TURNING IDEAS INTO DESIGNS.</strong></p>
+
+<p>
+LeDon focuses on clothing and fashion design concepts created with attention to style, detail, materials and presentation.
+</p>
+
 <a class="btn" href="ledon-clothing-designs.html">Explore LeDon Designs</a>
-<p style="font-size:12px;margin-top:18px">© LeDon. Original design concepts and creative content are protected. No copying, reproduction or resale without permission.</p>
+
+<p style="font-size:13px;margin-top:18px">
+© LeDon. Original design concepts and creative content are protected. No copying, reproduction or resale without permission.
+</p>
+
+</div>
+</section>
+
+<!-- LEDON DESIGNS GALLERY -->
+<section id="ledon-gallery">
+<h2>LeDon Designs Gallery</h2>
+
+<p class="gallery-heading">
+Explore original LeDon clothing and fashion design concepts.
+</p>
+
+<div id="ledonGallery" class="gallery">
+<div class="gallery-empty">Loading LeDon Designs...</div>
 </div>
 </section>
 
 <section id="ai">
 <h2>AI POWER</h2>
+
 <div class="card">
 <h3>AI POWER: The Complete Practical AI Course</h3>
 <p>Learn AI. Work Smarter. Build More.</p>
-<p>Practical AI skills for study, work, jobs and business, including AI-assisted presentations and PowerPoint creation.</p>
+<p>
+Practical AI skills for study, work, jobs and business, including AI-assisted presentations and PowerPoint creation.
+</p>
 </div>
 </section>
 
 <section id="team">
 <h2>Our Team</h2>
+
 <div class="grid">
+
 <div class="card team-card">
 <h3>MH Awan</h3>
 <p>CEO & Founder</p>
 </div>
+
 <div class="card team-card">
 <h3>Taylor Robinson</h3>
 <p>Business Development Manager — Gauteng</p>
 </div>
+
 <div class="card">
-<video controls><source src="team-llcm.mp4" type="video/mp4"></video>
+<video class="team-video" controls>
+<source src="team-llcm.mp4" type="video/mp4">
+</video>
 </div>
+
 </div>
+
+<p class="future-team">
+Additional team members can be added later without changing the main website structure.
+Each future team member can have up to 2 image/file spaces for profile and supporting work.
+</p>
 </section>
 
 <section id="contact">
 <h2>Contact LLCM</h2>
+
 <div class="contact">
 <p><strong>Launch Lane Creative Media</strong></p>
 <p>Gqeberha / Port Elizabeth, Eastern Cape, South Africa</p>
@@ -169,39 +595,211 @@ section{padding:45px 5%}
 
 <footer>
 <p>© 2026 Launch Lane Creative Media (LLCM). All Rights Reserved.</p>
-<p>Website content, graphics, original designs, branding and media are protected. Permission is required for copying, reproduction or resale.</p>
+<p>
+Website content, graphics, original designs, branding and media are protected.
+Permission is required for copying, reproduction or resale.
+</p>
 </footer>
 
 <div id="modal" class="modal" onclick="closeOutside(event)">
+
 <div class="modal-box">
+
 <span class="close" onclick="closeModal()">&times;</span>
+
 <h2 id="modalTitle"></h2>
+
 <div id="modalContent"></div>
+
 </div>
 </div>
 
 <script>
+
 const services={
-social:["Social Media Advertising","Creative social media advertising support.","R275"],
-graphic:["Graphic Design","Professional graphic design for personal and business requirements.","R150"],
-reels:["Reels","Short-form social media reel creation.","R450"],
-branding:["Branding Packages","Choose the package that suits your needs:<br><br>Basic Branding — <strong>R450</strong><br>Professional Branding — <strong>R750</strong><br>Complete Branding — <strong>R1200</strong>"],
-website:["Website Packages","Choose a website package:<br><br>Starter Website — <strong>R1500</strong><br>Professional Website — <strong>R2500</strong><br>Complete Website — <strong>R4000</strong>"],
-digital:["Digital Services","Digital assistance options:<br><br>Basic Digital Service — <strong>R150</strong><br>Advanced Digital Service — <strong>R250</strong>"],
-cv:["CV & Cover Letter","Professional CV — <strong>R200</strong><br><br>CV + Cover Letter — <strong>R450</strong>"],
-packages:["Business Packages","Starter — <strong>R350</strong><br>Grow — <strong>R650</strong><br>Launch — <strong>R1450</strong><br><br>Launch promotional price: <strong>R1305</strong>"],
-visa:["Visa & Permit Administration","Administrative assistance with visa and permit documentation for South Africa and other countries. LLCM provides administrative support only and does not provide legal or immigration advice."],
-promo:["Business Promotional Materials","Creative promotional materials for businesses. Contact LLCM for your requirements and a suitable quotation."]
+
+social:[
+"Social Media Advertising",
+"Creative social media advertising support.",
+"R275"
+],
+
+graphic:[
+"Graphic Design",
+"Professional graphic design for personal and business requirements.",
+"R150"
+],
+
+reels:[
+"Reels",
+"Short-form social media reel creation.",
+"R450"
+],
+
+branding:[
+"Branding Packages",
+"Choose the package that suits your needs:<br><br>Basic Branding — <strong>R450</strong><br>Professional Branding — <strong>R750</strong><br>Complete Branding — <strong>R1200</strong>"
+],
+
+website:[
+"Website Packages",
+"Choose a website package:<br><br>Starter Website — <strong>R1500</strong><br>Professional Website — <strong>R2500</strong><br>Complete Website — <strong>R4000</strong>"
+],
+
+digital:[
+"Digital Services",
+"Digital assistance options:<br><br>Basic Digital Service — <strong>R150</strong><br>Advanced Digital Service — <strong>R250</strong>"
+],
+
+cv:[
+"CV & Cover Letter",
+"Professional CV — <strong>R200</strong><br><br>CV + Cover Letter — <strong>R450</strong>"
+],
+
+packages:[
+"Business Packages",
+"Starter — <strong>R350</strong><br>Grow — <strong>R650</strong><br>Launch — <strong>R1450</strong><br><br>Launch promotional price: <strong>R1305</strong>"
+],
+
+visa:[
+"Visa & Permit Administration",
+"Administrative assistance with visa and permit documentation for South Africa and other countries. LLCM provides administrative support only and does not provide legal or immigration advice."
+],
+
+promo:[
+"Business Promotional Materials",
+"Creative promotional materials for businesses. Contact LLCM for your requirements and a suitable quotation."
+]
+
 };
 
 function openModal(id){
+
 document.getElementById("modalTitle").textContent=services[id][0];
+
 let data=services[id];
-document.getElementById("modalContent").innerHTML="<p>"+data[1]+"</p>"+(data[2]?"<p class='price'>Price: "+data[2]+"</p>":"")+"<a class='btn' href='https://wa.me/27625636067'>Request This Service</a>";
+
+document.getElementById("modalContent").innerHTML=
+"<p>"+data[1]+"</p>"+
+(data[2]?"<p class='price'>Price: "+data[2]+"</p>":"")+
+"<a class='btn' href='https://wa.me/27625636067'>Request This Service</a>";
+
 document.getElementById("modal").style.display="block";
 }
-function closeModal(){document.getElementById("modal").style.display="none"}
-function closeOutside(e){if(e.target.id==="modal")closeModal()}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+function closeOutside(e){
+if(e.target.id==="modal")closeModal();
+}
+
+/*
+==================================================
+AUTOMATIC GALLERY SYSTEM
+==================================================
+
+Upload your pictures into these GitHub folders:
+
+LLCM:
+llcm-designs/
+
+LeDon:
+ledon-designs/
+
+The website automatically reads the public GitHub
+folders and displays the images.
+
+You can add more images later without creating
+new boxes in this HTML.
+
+Accepted image types:
+.jpg
+.jpeg
+.png
+.webp
+.gif
+
+==================================================
+*/
+
+const GITHUB_USER="Llcmediaza";
+const GITHUB_REPO="Launch-Lane-Creative-Media-";
+
+async function loadGallery(folder,elementId,emptyText){
+
+const gallery=document.getElementById(elementId);
+
+try{
+
+const response=await fetch(
+"https://api.github.com/repos/"+
+GITHUB_USER+"/"+GITHUB_REPO+
+"/contents/"+folder
+);
+
+if(!response.ok)throw new Error("Gallery unavailable");
+
+const files=await response.json();
+
+const images=files.filter(file=>
+file.type==="file" &&
+(/\.(jpg|jpeg|png|webp|gif)$/i).test(file.name)
+);
+
+gallery.innerHTML="";
+
+if(images.length===0){
+
+gallery.innerHTML=
+"<div class='gallery-empty'>"+
+emptyText+
+"</div>";
+
+return;
+}
+
+images.forEach(file=>{
+
+const card=document.createElement("div");
+card.className="gallery-card";
+
+const img=document.createElement("img");
+img.src=file.download_url;
+img.alt=file.name.replace(/\.[^/.]+$/,"");
+img.loading="lazy";
+
+card.appendChild(img);
+gallery.appendChild(card);
+
+});
+
+}catch(error){
+
+gallery.innerHTML=
+"<div class='gallery-empty'>"+
+"Gallery is ready. Add your images to the correct GitHub folder and they will appear here."+
+"</div>";
+
+}
+
+}
+
+/* LOAD BOTH GALLERIES */
+
+loadGallery(
+"llcm-designs",
+"llcmGallery",
+"Add LLCM designs to the llcm-designs folder."
+);
+
+loadGallery(
+"ledon-designs",
+"ledonGallery",
+"Add LeDon clothing designs to the ledon-designs folder."
+);
+
 </script>
 
 </body>
