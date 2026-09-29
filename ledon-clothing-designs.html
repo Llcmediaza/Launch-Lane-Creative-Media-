@@ -1,7 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>LeDon Clothing Designs | Launch Lane Creative Media</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeDon Clothing Designs | Launch Lane Creative Media</title>
+
+<style>
 *{
     box-sizing:border-box;
     margin:0;
@@ -219,12 +223,14 @@ nav a:hover{
 }
 
 .gallery-loading{
+    grid-column:1/-1;
     text-align:center;
     color:#aaa;
     padding:30px 10px;
 }
 
 .gallery-error{
+    grid-column:1/-1;
     text-align:center;
     color:#aaa;
     padding:30px 10px;
@@ -236,10 +242,12 @@ nav a:hover{
     background:#111;
     border:1px solid #333;
     overflow:hidden;
+    transition:.3s;
 }
 
 .gallery-image-card:hover{
     border-color:#d4af37;
+    transform:translateY(-3px);
 }
 
 .gallery-image{
@@ -311,6 +319,7 @@ footer strong{
 }
 
 @media(max-width:600px){
+
     .hero h1{
         font-size:30px;
     }
@@ -325,212 +334,203 @@ footer strong{
         height:300px;
     }
 }
-</style></head><body><header>
+</style>
+</head>
+
+<body>
+
+<header>
     <div class="logo">
         <img src="ledon-logo.png" alt="LeDon — Your Designer">
     </div>
-</header><nav>
+</header>
+
+<nav>
     <a href="#gallery">GALLERY</a>
     <a href="#mens">MEN'S</a>
     <a href="#womens">WOMEN'S</a>
     <a href="#other">OTHER</a>
     <a href="#contact">CONTACT</a>
-</nav><section class="hero">
+</nav>
+
+<section class="hero">
     <h1>Original Clothing Designs</h1>
+
     <p>
         Original fashion and clothing concepts designed by MH Awan
         for clothing brands, manufacturers, factories, retailers and
         commercial buyers.
     </p>
-</section><div class="notice">
+</section>
+
+<div class="notice">
     PREVIEW ONLY — DESIGNS ARE PROTECTED AND NOT FOR REPRODUCTION.
-</div><div class="info">
+</div>
+
+<div class="info">
     <strong>Design Pricing:</strong><br>
     Each clothing design is assessed individually according to
     complexity, detail, development, originality and intended
     commercial use. Commercial pricing is provided per design.
     Original files and extended specifications remain protected
     until purchase or confirmed agreement.
-</div><!-- AUTOMATIC LEDON GALLERY --><section class="section" id="gallery">
-    <h2 class="section-title">LeDon DESIGN GALLERY</h2><div id="ledonGallery" class="design-grid">
-    <div class="gallery-loading">
-        Loading LeDon designs...
-    </div>
 </div>
 
-</section><!-- MEN'S --><section class="section" id="mens">
-    <h2 class="section-title">MEN'S COLLECTION</h2><div class="category-title">T-Shirts</div>
-<div class="design-grid">
 
-    <div class="design-card">
-        <div class="preview">
-            <div class="placeholder">UPLOAD DESIGN</div>
-            <div class="watermark">LeDon • PREVIEW ONLY</div>
+<!-- =====================================================
+     MAIN LEDON GALLERY
+     GITHUB FOLDER: ledon-designs-gallery
+     ===================================================== -->
+
+<section class="section" id="gallery">
+
+    <h2 class="section-title">LeDon DESIGN GALLERY</h2>
+
+    <div id="ledonGallery" class="design-grid">
+
+        <div class="gallery-loading">
+            Loading LeDon designs...
         </div>
 
-        <div class="card-content">
-            <div class="code">LD-M001</div>
-            <div class="design-name">Men's T-Shirt Design</div>
-
-            <div class="details">
-                Clothing Type: <span>T-Shirt</span><br>
-                Sizes: <span>To be specified</span><br>
-                Material: <span>To be specified</span><br>
-                Colours: <span>To be specified</span><br>
-                Fit/Style: <span>To be specified</span>
-            </div>
-
-            <div class="price">
-                Commercial Price: On Request
-            </div>
-
-            <div class="buttons">
-                <a class="btn" href="#contact">
-                    VIEW FULL DESIGN 🔒
-                </a>
-
-                <a class="btn" href="https://wa.me/27625636067">
-                    ENQUIRE
-                </a>
-            </div>
-        </div>
     </div>
 
-</div>
+</section>
 
-<div class="category-title">Polo Shirts</div>
-<div class="design-grid"></div>
 
-<div class="category-title">Hoodies</div>
-<div class="design-grid"></div>
+<!-- =====================================================
+     MEN'S COLLECTION
+     GITHUB FOLDER: ledon-mens
+     ===================================================== -->
 
-<div class="category-title">Sweatshirts</div>
-<div class="design-grid"></div>
+<section class="section" id="mens">
 
-<div class="category-title">Jackets</div>
-<div class="design-grid"></div>
+    <h2 class="section-title">MEN'S COLLECTION</h2>
 
-<div class="category-title">Tracksuits</div>
-<div class="design-grid"></div>
+    <div class="category-title">T-Shirts</div>
 
-<div class="category-title">Shorts</div>
-<div class="design-grid"></div>
+    <div id="mensGallery" class="design-grid">
 
-<div class="category-title">Pants</div>
-<div class="design-grid"></div>
+        <div class="gallery-loading">
+            Loading Men's Collection...
+        </div>
 
-<div class="category-title">Sportswear</div>
-<div class="design-grid"></div>
+    </div>
 
-<div class="category-title">Casual Wear</div>
-<div class="design-grid"></div>
+</section>
 
-<div class="category-title">Streetwear</div>
-<div class="design-grid"></div>
 
-<div class="category-title">Traditional Wear</div>
-<div class="design-grid"></div>
+<!-- =====================================================
+     WOMEN'S COLLECTION
+     GITHUB FOLDER: ledon-womens
+     ===================================================== -->
 
-</section><!-- WOMEN'S --><section class="section" id="womens">
-    <h2 class="section-title">WOMEN'S COLLECTION</h2><div class="category-title">T-Shirts & Tops</div>
-<div class="design-grid"></div>
+<section class="section" id="womens">
 
-<div class="category-title">Hoodies</div>
-<div class="design-grid"></div>
+    <h2 class="section-title">WOMEN'S COLLECTION</h2>
 
-<div class="category-title">Dresses</div>
-<div class="design-grid"></div>
+    <div class="category-title">Fashion Designs</div>
 
-<div class="category-title">Skirts</div>
-<div class="design-grid"></div>
+    <div id="womensGallery" class="design-grid">
 
-<div class="category-title">Jeans & Pants</div>
-<div class="design-grid"></div>
+        <div class="gallery-loading">
+            Loading Women's Collection...
+        </div>
 
-<div class="category-title">Tracksuits</div>
-<div class="design-grid"></div>
+    </div>
 
-<div class="category-title">Jackets</div>
-<div class="design-grid"></div>
+</section>
 
-<div class="category-title">Activewear</div>
-<div class="design-grid"></div>
 
-<div class="category-title">Casual Wear</div>
-<div class="design-grid"></div>
+<!-- =====================================================
+     OTHER COLLECTIONS
+     GITHUB FOLDER: ledon-other
+     ===================================================== -->
 
-<div class="category-title">Streetwear</div>
-<div class="design-grid"></div>
+<section class="section" id="other">
 
-<div class="category-title">Traditional Wear</div>
-<div class="design-grid"></div>
+    <h2 class="section-title">OTHER COLLECTIONS</h2>
 
-<div class="category-title">Matching Sets</div>
-<div class="design-grid"></div>
+    <div class="category-title">Kids • Couples • Family • Custom</div>
 
-</section><!-- OTHER --><section class="section" id="other">
-    <h2 class="section-title">OTHER COLLECTIONS</h2><div class="category-title">Kids</div>
-<div class="design-grid"></div>
+    <div id="otherGallery" class="design-grid">
 
-<div class="category-title">Couples / Matching</div>
-<div class="design-grid"></div>
+        <div class="gallery-loading">
+            Loading Other Collections...
+        </div>
 
-<div class="category-title">Family Sets</div>
-<div class="design-grid"></div>
+    </div>
 
-<div class="category-title">Custom Clothing</div>
-<div class="design-grid"></div>
+</section>
 
-</section><section class="contact" id="contact">
-    <h2>Interested in a Design?</h2><p>
-    For commercial purchase, licensing, manufacturing or custom
-    clothing design enquiries, contact LeDon.
-</p>
 
-<div class="contact-buttons">
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
 
-    <a class="contact-btn" href="https://wa.me/27625636067">
-        WhatsApp
-    </a>
+<section class="contact" id="contact">
 
-    <a class="contact-btn" href="mailto:llcmediaza@gmail.com">
-        Email
-    </a>
+    <h2>Interested in a Design?</h2>
 
-</div>
+    <p>
+        For commercial purchase, licensing, manufacturing or custom
+        clothing design enquiries, contact LeDon.
+    </p>
 
-</section><footer>
+    <div class="contact-buttons">
+
+        <a class="contact-btn" href="https://wa.me/27625636067">
+            WhatsApp
+        </a>
+
+        <a class="contact-btn" href="mailto:llcmediaza@gmail.com">
+            Email
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
     <strong>LeDon — Your Designer</strong><br>
+
     Designed by MH Awan<br>
+
     Launch Lane Creative Media (LLCM)<br><br>
+
     © 2026 LLCM. All Rights Reserved.
-</footer><script>
 
-/* =========================================
-   AUTOMATIC LEDON GALLERY
-   ========================================= */
+</footer>
 
-const gallery = document.getElementById("ledonGallery");
 
-/*
-   Your GitHub repository
-*/
+<script>
+
+/* =====================================================
+   AUTOMATIC GITHUB GALLERIES
+   ===================================================== */
+
 const owner = "Llcmediaza";
 const repo = "Launch-Lane-Creative-Media-";
+const branch = "main";
+
 
 /*
-   We check several possible folder names so the
-   gallery still works if the folder was created
-   with one of these names.
+   These are the ONLY folders the page needs.
 */
-const possibleFolders = [
-    "ledon-designs-gallery",
-    "ledon designs gallery",
-    "LeDon-designs-gallery",
-    "LeDon Designs Gallery",
-    "ledon-designs",
-    "ledon-clothing-designs"
-];
+
+const galleries = {
+
+    ledonGallery: "ledon-designs-gallery",
+
+    mensGallery: "ledon-mens",
+
+    womensGallery: "ledon-womens",
+
+    otherGallery: "ledon-other"
+
+};
+
 
 const imageExtensions = [
     ".jpg",
@@ -540,115 +540,238 @@ const imageExtensions = [
     ".gif"
 ];
 
-async function findLeDonGallery(){
 
-    for(const folder of possibleFolders){
+/* =====================================================
+   LOAD ONE GITHUB FOLDER
+   ===================================================== */
 
-        try{
+async function loadGallery(elementId, folder, title){
 
-            const apiUrl =
-                "https://api.github.com/repos/" +
-                owner + "/" +
-                repo +
-                "/contents/" +
-                encodeURIComponent(folder);
+    const gallery = document.getElementById(elementId);
 
-            const response = await fetch(apiUrl);
+    try{
 
-            if(!response.ok){
-                continue;
-            }
+        const apiUrl =
+            "https://api.github.com/repos/" +
+            owner + "/" +
+            repo +
+            "/contents/" +
+            encodeURIComponent(folder) +
+            "?ref=" +
+            encodeURIComponent(branch);
 
-            const files = await response.json();
+        const response = await fetch(apiUrl);
 
-            if(!Array.isArray(files)){
-                continue;
-            }
+        if(!response.ok){
 
-            const images = files.filter(file =>
-                file.type === "file" &&
-                imageExtensions.some(ext =>
-                    file.name.toLowerCase().endsWith(ext)
-                )
-            );
-
-            if(images.length > 0){
-                displayGallery(images);
-                return;
-            }
-
-        }catch(error){
-            console.log("Gallery folder check failed:", folder);
-        }
-    }
-
-    gallery.innerHTML = `
-        <div class="gallery-error">
-            No LeDon gallery images found yet.<br><br>
-            Make sure your images are uploaded inside the
-            LeDon gallery folder in the GitHub repository.
-        </div>
-    `;
-}
-
-function displayGallery(images){
-
-    gallery.innerHTML = "";
-
-    images.forEach((image,index) => {
-
-        const card = document.createElement("div");
-
-        card.className = "gallery-image-card";
-
-        card.innerHTML = `
-            <div class="preview">
-                <img
-                    src="${image.download_url}"
-                    alt="LeDon Clothing Design ${index + 1}"
-                    loading="lazy"
-                >
-                <div class="watermark">
-                    LeDon • PREVIEW ONLY
+            gallery.innerHTML = `
+                <div class="gallery-error">
+                    No ${title} images found yet.
                 </div>
-            </div>
+            `;
 
-            <div class="gallery-caption">
-                LeDon Design ${String(index + 1).padStart(2,"0")}
+            return;
+        }
+
+
+        const files = await response.json();
+
+
+        if(!Array.isArray(files)){
+
+            gallery.innerHTML = `
+                <div class="gallery-error">
+                    No ${title} images found yet.
+                </div>
+            `;
+
+            return;
+        }
+
+
+        const images = files.filter(file =>
+
+            file.type === "file" &&
+
+            imageExtensions.some(ext =>
+                file.name.toLowerCase().endsWith(ext)
+            )
+
+        );
+
+
+        if(images.length === 0){
+
+            gallery.innerHTML = `
+                <div class="gallery-error">
+                    No ${title} images uploaded yet.
+                </div>
+            `;
+
+            return;
+        }
+
+
+        displayGallery(
+            gallery,
+            images,
+            title
+        );
+
+
+    }catch(error){
+
+        console.log(
+            "Gallery loading error:",
+            folder,
+            error
+        );
+
+        gallery.innerHTML = `
+            <div class="gallery-error">
+                ${title} gallery is temporarily unavailable.
             </div>
         `;
 
-        gallery.appendChild(card);
-    });
+    }
+
 }
 
-findLeDonGallery();
+
+/* =====================================================
+   DISPLAY IMAGES
+   ===================================================== */
+
+function displayGallery(gallery, images, title){
+
+    gallery.innerHTML = "";
 
 
-/* =========================================
+    images.forEach((image,index) => {
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "gallery-image-card";
+
+
+        card.innerHTML = `
+
+            <div class="preview">
+
+                <img
+                    class="gallery-image"
+                    src="${image.download_url}"
+                    alt="${title} Design ${index + 1}"
+                    loading="lazy"
+                    draggable="false"
+                >
+
+                <div class="watermark">
+                    LeDon • PREVIEW ONLY
+                </div>
+
+            </div>
+
+
+            <div class="gallery-caption">
+
+                ${title}
+                ${String(index + 1).padStart(2,"0")}
+
+            </div>
+
+        `;
+
+
+        gallery.appendChild(card);
+
+    });
+
+}
+
+
+/* =====================================================
+   LOAD ALL FOUR GALLERIES
+   ===================================================== */
+
+loadGallery(
+    "ledonGallery",
+    galleries.ledonGallery,
+    "LeDon Design"
+);
+
+
+loadGallery(
+    "mensGallery",
+    galleries.mensGallery,
+    "Men's Design"
+);
+
+
+loadGallery(
+    "womensGallery",
+    galleries.womensGallery,
+    "Women's Design"
+);
+
+
+loadGallery(
+    "otherGallery",
+    galleries.otherGallery,
+    "Other Collection"
+);
+
+
+/* =====================================================
    BASIC IMAGE PROTECTION
-   ========================================= */
+   ===================================================== */
 
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-});
+document.addEventListener(
+    "contextmenu",
+    function(e){
 
-document.addEventListener("dragstart", function(e){
-    if(e.target.tagName === "IMG"){
         e.preventDefault();
+
     }
-});
+);
 
-document.addEventListener("keydown", function(e){
 
-    if(
-        (e.ctrlKey || e.metaKey) &&
-        ["s","u","p"].includes(e.key.toLowerCase())
-    ){
-        e.preventDefault();
+document.addEventListener(
+    "dragstart",
+    function(e){
+
+        if(e.target.tagName === "IMG"){
+
+            e.preventDefault();
+
+        }
+
     }
+);
 
-});
 
-</script></body>
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(
+            (e.ctrlKey || e.metaKey) &&
+            ["s","u","p"].includes(
+                e.key.toLowerCase()
+            )
+        ){
+
+            e.preventDefault();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
 </html>
