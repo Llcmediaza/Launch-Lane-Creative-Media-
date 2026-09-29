@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>LeDon Clothing Designs | Launch Lane Creative Media</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>LeDon Clothing Designs | Launch Lane Creative Media</title><style>
 *{
     box-sizing:border-box;
     margin:0;
@@ -27,37 +22,11 @@ header{
     padding:35px 20px;
 }
 
-.logo-title{
-    color:#d4af37;
-    font-size:42px;
-    font-weight:800;
-    letter-spacing:2px;
-}
-    .logo img{
+.logo img{
     width:170px;
     height:auto;
     display:block;
     margin:0 auto;
-}
-
-.designer{
-    font-size:18px;
-    letter-spacing:4px;
-    color:#fff;
-    margin-top:4px;
-}
-
-.created{
-    color:#c9a96e;
-    margin-top:12px;
-    font-size:15px;
-}
-
-.tagline{
-    color:#f5d76e;
-    font-weight:bold;
-    letter-spacing:3px;
-    margin-top:8px;
 }
 
 nav{
@@ -181,20 +150,13 @@ nav a:hover{
     display:block;
 }
 
-.placeholder{
-    color:#777;
-    font-size:17px;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
 .watermark{
     position:absolute;
     inset:0;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:rgba(212,175,55,.28);
+    color:rgba(212,175,55,.30);
     font-size:25px;
     font-weight:bold;
     transform:rotate(-25deg);
@@ -256,6 +218,45 @@ nav a:hover{
     color:#000;
 }
 
+.gallery-loading{
+    text-align:center;
+    color:#aaa;
+    padding:30px 10px;
+}
+
+.gallery-error{
+    text-align:center;
+    color:#aaa;
+    padding:30px 10px;
+    border:1px solid #333;
+    background:#101010;
+}
+
+.gallery-image-card{
+    background:#111;
+    border:1px solid #333;
+    overflow:hidden;
+}
+
+.gallery-image-card:hover{
+    border-color:#d4af37;
+}
+
+.gallery-image{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-caption{
+    padding:12px;
+    text-align:center;
+    color:#d4af37;
+    font-weight:bold;
+    font-size:14px;
+}
+
 .contact{
     max-width:900px;
     margin:40px auto;
@@ -310,10 +311,6 @@ footer strong{
 }
 
 @media(max-width:600px){
-    .logo-title{
-        font-size:34px;
-    }
-
     .hero h1{
         font-size:30px;
     }
@@ -323,198 +320,315 @@ footer strong{
         display:inline-block;
     }
 
-    .preview{
+    .preview,
+    .gallery-image{
         height:300px;
     }
 }
-</style>
-</head>
-
-<body>
-
-<header>
+</style></head><body><header>
     <div class="logo">
-    <img src="ledon-logo.png" alt="LeDon — Your Designer">
-</div>
-</header>
-
-<nav>
+        <img src="ledon-logo.png" alt="LeDon — Your Designer">
+    </div>
+</header><nav>
+    <a href="#gallery">GALLERY</a>
     <a href="#mens">MEN'S</a>
     <a href="#womens">WOMEN'S</a>
     <a href="#other">OTHER</a>
     <a href="#contact">CONTACT</a>
-</nav>
-
-<section class="hero">
+</nav><section class="hero">
     <h1>Original Clothing Designs</h1>
     <p>
         Original fashion and clothing concepts designed by MH Awan
         for clothing brands, manufacturers, factories, retailers and
         commercial buyers.
     </p>
-</section>
-
-<div class="notice">
+</section><div class="notice">
     PREVIEW ONLY — DESIGNS ARE PROTECTED AND NOT FOR REPRODUCTION.
-</div>
-
-<div class="info">
+</div><div class="info">
     <strong>Design Pricing:</strong><br>
     Each clothing design is assessed individually according to
     complexity, detail, development, originality and intended
     commercial use. Commercial pricing is provided per design.
     Original files and extended specifications remain protected
     until purchase or confirmed agreement.
+</div><!-- AUTOMATIC LEDON GALLERY --><section class="section" id="gallery">
+    <h2 class="section-title">LeDon DESIGN GALLERY</h2><div id="ledonGallery" class="design-grid">
+    <div class="gallery-loading">
+        Loading LeDon designs...
+    </div>
 </div>
 
-<!-- MEN'S -->
-<section class="section" id="mens">
-    <h2 class="section-title">MEN'S COLLECTION</h2>
+</section><!-- MEN'S --><section class="section" id="mens">
+    <h2 class="section-title">MEN'S COLLECTION</h2><div class="category-title">T-Shirts</div>
+<div class="design-grid">
 
-    <div class="category-title">T-Shirts</div>
-    <div class="design-grid">
-        <div class="design-card">
-            <div class="preview">
-                <div class="placeholder">UPLOAD DESIGN</div>
-                <div class="watermark">LeDon • PREVIEW ONLY</div>
+    <div class="design-card">
+        <div class="preview">
+            <div class="placeholder">UPLOAD DESIGN</div>
+            <div class="watermark">LeDon • PREVIEW ONLY</div>
+        </div>
+
+        <div class="card-content">
+            <div class="code">LD-M001</div>
+            <div class="design-name">Men's T-Shirt Design</div>
+
+            <div class="details">
+                Clothing Type: <span>T-Shirt</span><br>
+                Sizes: <span>To be specified</span><br>
+                Material: <span>To be specified</span><br>
+                Colours: <span>To be specified</span><br>
+                Fit/Style: <span>To be specified</span>
             </div>
-            <div class="card-content">
-                <div class="code">LD-M001</div>
-                <div class="design-name">Men's T-Shirt Design</div>
-                <div class="details">
-                    Clothing Type: <span>T-Shirt</span><br>
-                    Sizes: <span>To be specified</span><br>
-                    Material: <span>To be specified</span><br>
-                    Colours: <span>To be specified</span><br>
-                    Fit/Style: <span>To be specified</span>
-                </div>
-                <div class="price">Commercial Price: On Request</div>
-                <div class="buttons">
-                    <a class="btn" href="#contact">VIEW FULL DESIGN 🔒</a>
-                    <a class="btn" href="https://wa.me/27625636067">ENQUIRE</a>
-                </div>
+
+            <div class="price">
+                Commercial Price: On Request
+            </div>
+
+            <div class="buttons">
+                <a class="btn" href="#contact">
+                    VIEW FULL DESIGN 🔒
+                </a>
+
+                <a class="btn" href="https://wa.me/27625636067">
+                    ENQUIRE
+                </a>
             </div>
         </div>
     </div>
 
-    <div class="category-title">Polo Shirts</div>
-    <div class="design-grid"></div>
+</div>
 
-    <div class="category-title">Hoodies</div>
-    <div class="design-grid"></div>
+<div class="category-title">Polo Shirts</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Sweatshirts</div>
-    <div class="design-grid"></div>
+<div class="category-title">Hoodies</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Jackets</div>
-    <div class="design-grid"></div>
+<div class="category-title">Sweatshirts</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Tracksuits</div>
-    <div class="design-grid"></div>
+<div class="category-title">Jackets</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Shorts</div>
-    <div class="design-grid"></div>
+<div class="category-title">Tracksuits</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Pants</div>
-    <div class="design-grid"></div>
+<div class="category-title">Shorts</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Sportswear</div>
-    <div class="design-grid"></div>
+<div class="category-title">Pants</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Casual Wear</div>
-    <div class="design-grid"></div>
+<div class="category-title">Sportswear</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Streetwear</div>
-    <div class="design-grid"></div>
+<div class="category-title">Casual Wear</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Traditional Wear</div>
-    <div class="design-grid"></div>
-</section>
+<div class="category-title">Streetwear</div>
+<div class="design-grid"></div>
 
-<!-- WOMEN'S -->
-<section class="section" id="womens">
-    <h2 class="section-title">WOMEN'S COLLECTION</h2>
+<div class="category-title">Traditional Wear</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">T-Shirts & Tops</div>
-    <div class="design-grid"></div>
+</section><!-- WOMEN'S --><section class="section" id="womens">
+    <h2 class="section-title">WOMEN'S COLLECTION</h2><div class="category-title">T-Shirts & Tops</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Hoodies</div>
-    <div class="design-grid"></div>
+<div class="category-title">Hoodies</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Dresses</div>
-    <div class="design-grid"></div>
+<div class="category-title">Dresses</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Skirts</div>
-    <div class="design-grid"></div>
+<div class="category-title">Skirts</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Jeans & Pants</div>
-    <div class="design-grid"></div>
+<div class="category-title">Jeans & Pants</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Tracksuits</div>
-    <div class="design-grid"></div>
+<div class="category-title">Tracksuits</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Jackets</div>
-    <div class="design-grid"></div>
+<div class="category-title">Jackets</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Activewear</div>
-    <div class="design-grid"></div>
+<div class="category-title">Activewear</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Casual Wear</div>
-    <div class="design-grid"></div>
+<div class="category-title">Casual Wear</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Streetwear</div>
-    <div class="design-grid"></div>
+<div class="category-title">Streetwear</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Traditional Wear</div>
-    <div class="design-grid"></div>
+<div class="category-title">Traditional Wear</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Matching Sets</div>
-    <div class="design-grid"></div>
-</section>
+<div class="category-title">Matching Sets</div>
+<div class="design-grid"></div>
 
-<!-- OTHER -->
-<section class="section" id="other">
-    <h2 class="section-title">OTHER COLLECTIONS</h2>
+</section><!-- OTHER --><section class="section" id="other">
+    <h2 class="section-title">OTHER COLLECTIONS</h2><div class="category-title">Kids</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Kids</div>
-    <div class="design-grid"></div>
+<div class="category-title">Couples / Matching</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Couples / Matching</div>
-    <div class="design-grid"></div>
+<div class="category-title">Family Sets</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Family Sets</div>
-    <div class="design-grid"></div>
+<div class="category-title">Custom Clothing</div>
+<div class="design-grid"></div>
 
-    <div class="category-title">Custom Clothing</div>
-    <div class="design-grid"></div>
-</section>
+</section><section class="contact" id="contact">
+    <h2>Interested in a Design?</h2><p>
+    For commercial purchase, licensing, manufacturing or custom
+    clothing design enquiries, contact LeDon.
+</p>
 
-<section class="contact" id="contact">
-    <h2>Interested in a Design?</h2>
-    <p>
-        For commercial purchase, licensing, manufacturing or custom
-        clothing design enquiries, contact LeDon.
-    </p>
+<div class="contact-buttons">
 
-    <div class="contact-buttons">
-        <a class="contact-btn" href="https://wa.me/27625636067">
-            WhatsApp
-        </a>
+    <a class="contact-btn" href="https://wa.me/27625636067">
+        WhatsApp
+    </a>
 
-        <a class="contact-btn" href="mailto:llcmediaza@gmail.com">
-            Email
-        </a>
-    </div>
-</section>
+    <a class="contact-btn" href="mailto:llcmediaza@gmail.com">
+        Email
+    </a>
 
-<footer>
+</div>
+
+</section><footer>
     <strong>LeDon — Your Designer</strong><br>
     Designed by MH Awan<br>
     Launch Lane Creative Media (LLCM)<br><br>
     © 2026 LLCM. All Rights Reserved.
-</footer>
+</footer><script>
 
-<script>
+/* =========================================
+   AUTOMATIC LEDON GALLERY
+   ========================================= */
+
+const gallery = document.getElementById("ledonGallery");
+
+/*
+   Your GitHub repository
+*/
+const owner = "Llcmediaza";
+const repo = "Launch-Lane-Creative-Media-";
+
+/*
+   We check several possible folder names so the
+   gallery still works if the folder was created
+   with one of these names.
+*/
+const possibleFolders = [
+    "ledon-designs-gallery",
+    "ledon designs gallery",
+    "LeDon-designs-gallery",
+    "LeDon Designs Gallery",
+    "ledon-designs",
+    "ledon-clothing-designs"
+];
+
+const imageExtensions = [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp",
+    ".gif"
+];
+
+async function findLeDonGallery(){
+
+    for(const folder of possibleFolders){
+
+        try{
+
+            const apiUrl =
+                "https://api.github.com/repos/" +
+                owner + "/" +
+                repo +
+                "/contents/" +
+                encodeURIComponent(folder);
+
+            const response = await fetch(apiUrl);
+
+            if(!response.ok){
+                continue;
+            }
+
+            const files = await response.json();
+
+            if(!Array.isArray(files)){
+                continue;
+            }
+
+            const images = files.filter(file =>
+                file.type === "file" &&
+                imageExtensions.some(ext =>
+                    file.name.toLowerCase().endsWith(ext)
+                )
+            );
+
+            if(images.length > 0){
+                displayGallery(images);
+                return;
+            }
+
+        }catch(error){
+            console.log("Gallery folder check failed:", folder);
+        }
+    }
+
+    gallery.innerHTML = `
+        <div class="gallery-error">
+            No LeDon gallery images found yet.<br><br>
+            Make sure your images are uploaded inside the
+            LeDon gallery folder in the GitHub repository.
+        </div>
+    `;
+}
+
+function displayGallery(images){
+
+    gallery.innerHTML = "";
+
+    images.forEach((image,index) => {
+
+        const card = document.createElement("div");
+
+        card.className = "gallery-image-card";
+
+        card.innerHTML = `
+            <div class="preview">
+                <img
+                    src="${image.download_url}"
+                    alt="LeDon Clothing Design ${index + 1}"
+                    loading="lazy"
+                >
+                <div class="watermark">
+                    LeDon • PREVIEW ONLY
+                </div>
+            </div>
+
+            <div class="gallery-caption">
+                LeDon Design ${String(index + 1).padStart(2,"0")}
+            </div>
+        `;
+
+        gallery.appendChild(card);
+    });
+}
+
+findLeDonGallery();
+
+
+/* =========================================
+   BASIC IMAGE PROTECTION
+   ========================================= */
+
 document.addEventListener("contextmenu", function(e){
     e.preventDefault();
 });
@@ -526,14 +640,15 @@ document.addEventListener("dragstart", function(e){
 });
 
 document.addEventListener("keydown", function(e){
+
     if(
         (e.ctrlKey || e.metaKey) &&
         ["s","u","p"].includes(e.key.toLowerCase())
     ){
         e.preventDefault();
     }
-});
-</script>
 
-</body>
+});
+
+</script></body>
 </html>
