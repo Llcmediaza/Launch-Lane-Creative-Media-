@@ -41,7 +41,13 @@ z-index:1000
 }
 
 .logo{width:75px;height:75px;object-fit:contain}
-.brand{color:var(--gold);font-size:24px;font-weight:bold}
+.brand{
+color:var(--gold);
+font-size:clamp(14px,2vw,24px);
+font-weight:bold;
+white-space:nowrap;
+flex-shrink:0
+}
 
 nav a{
 color:#fff;
