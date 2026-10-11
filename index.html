@@ -333,7 +333,11 @@ padding:12px 4%
 }
 
 .logo{width:60px;height:60px}
-.brand{font-size:19px}
+.brand{
+font-size:clamp(13px,4.2vw,19px);
+white-space:nowrap;
+flex-shrink:0
+}
 
 nav{
 width:100%;
