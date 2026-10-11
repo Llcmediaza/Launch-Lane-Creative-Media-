@@ -239,7 +239,16 @@ margin-top:8px
 /* TEAM */
 
 .team-card{text-align:center}
+@media (max-width: 767px) {
+  .team-card p {
+    line-height: 1.2;
+  }
 
+  .team-card p[style*="font-size: 13px"] {
+    font-size: 11px !important;
+    margin-top: -6px !important;
+  }
+}
 .team-card img{
 width:100%;
 height:220px;
