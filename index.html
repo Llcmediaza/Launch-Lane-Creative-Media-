@@ -771,109 +771,167 @@ Permission is required for copying, reproduction or resale.
   <p>Nothing in this policy excludes any statutory cancellation rights or other protections that apply to the transaction.</p>
 </section>
 
+
+<!-- SERVICES SECTION -->
+
+<section id="services" class="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p>CREATE. CAPTURE. GROW.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card" onclick="openModal('social')">
+        <h3>Social Media Advertising</h3>
+        <p>From R350</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('graphic')">
+        <h3>Graphic Design</h3>
+        <p>From R250</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('reels')">
+        <h3>Reels</h3>
+        <p>From R650</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('branding')">
+        <h3>Branding Packages</h3>
+        <p>From R750</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('website')">
+        <h3>Website Packages</h3>
+        <p>From R2000</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('digital')">
+        <h3>Digital Services</h3>
+        <p>From R200</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('cv')">
+        <h3>CV & Cover Letter</h3>
+        <p>From R250</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('business')">
+        <h3>Business Packages</h3>
+        <p>From R450</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('visa')">
+        <h3>Visa & Permit Assistance</h3>
+        <p>Request a quote</p>
+      </div>
+
+      <div class="service-card" onclick="openModal('promo')">
+        <h3>Promotional Materials</h3>
+        <p>Request a quote</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- SERVICE MODAL -->
 
 <div id="modal" class="modal" onclick="closeOutside(event)">
-
-<div class="modal-box">
-
-<span class="close" onclick="closeModal()">×</span>
-
-<h2 id="modalTitle"></h2>
-
-<div id="modalContent"></div>
-
-</div>
-
+  <div class="modal-box">
+    <span class="close" onclick="closeModal()">×</span>
+    <h2 id="modalTitle"></h2>
+    <div id="modalContent"></div>
+  </div>
 </div>
 
 <script>
+const services = {
+  social: [
+    "Social Media Advertising",
+    "Creative advertising support for your business.<br><br>Advertising packages are quoted according to the campaign, duration and deliverables. Paid advertising budget is separate.",
+    "From R350"
+  ],
 
-const services={
+  graphic: [
+    "Graphic Design",
+    "Professional graphic designs for businesses and individuals.<br><br>Final pricing depends on the design and requirements.",
+    "From R250"
+  ],
 
-social:[
-"Social Media Advertising",
-"Creative social media advertising support.",
-"R275"
-],
+  reels: [
+    "Reels",
+    "Short-form video content for social media.<br><br>Pricing depends on video length, editing and requirements.",
+    "From R650"
+  ],
 
-graphic:[
-"Graphic Design",
-"Professional graphic design for personal and business requirements.",
-"R150"
-],
+  branding: [
+    "Branding Packages",
+    "Basic Branding — <strong>R750</strong><br><br>Professional Branding — <strong>R1500</strong><br><br>Complete Branding — <strong>R2500</strong><br><br>Contact us to confirm the deliverables for each package.",
+    "From R750"
+  ],
 
-reels:[
-"Reels",
-"Short-form social media reel creation.",
-"R450"
-],
+  website: [
+    "Website Packages",
+    "Starter Website — <strong>R2000</strong><br><br>Professional Website — <strong>R3500</strong><br><br>Complete Website — <strong>R5500</strong><br><br>Final pricing depends on pages, features and requirements. Domain and hosting costs are quoted separately where applicable.",
+    "From R2000"
+  ],
 
-branding:[
-"Branding Packages",
-"Choose the package that suits your needs:<br><br>Basic Branding — <strong>R450</strong><br>Professional Branding — <strong>R750</strong><br>Complete Branding — <strong>R1200</strong>",
-"From R450"
-],
+  digital: [
+    "Digital Services",
+    "Basic Digital Service — <strong>R200</strong><br><br>Advanced Digital Service — <strong>R350</strong><br><br>Contact us to confirm the service you need.",
+    "From R200"
+  ],
 
-website:[
-"Website Packages",
-"Choose a website package:<br><br>Starter Website — <strong>R1500</strong><br>Professional Website — <strong>R2500</strong><br>Complete Website — <strong>R4000</strong>",
-"From R1500"
-],
+  cv: [
+    "CV & Cover Letter",
+    "Professional CV — <strong>R250</strong><br><br>CV + Cover Letter — <strong>R500</strong>",
+    "From R250"
+  ],
 
-digital:[
-"Digital Services",
-"Digital assistance options:<br><br>Basic Digital Service — <strong>R150</strong><br>Advanced Digital Service — <strong>R250</strong>"
-],
+  business: [
+    "Business Packages",
+    "Business Starter — <strong>R450</strong><br><br>Business Grow — <strong>R850</strong><br><br>Business Launch — <strong>R1450</strong><br><br>Contact us for the inclusions and requirements for each package.",
+    "From R450"
+  ],
 
-cv:[
-"CV & Cover Letter",
-"Professional CV — <strong>R200</strong><br><br>CV + Cover Letter — <strong>R450</strong>"
-],
+  visa: [
+    "Visa & Permit Assistance",
+    "Administrative assistance with document preparation and application processes. Approval is determined by the relevant authorities.",
+    "Request a quote"
+  ],
 
-packages:[
-"Business Packages",
-"Starter — <strong>R350</strong><br>Grow — <strong>R650</strong><br>Launch — <strong>R1450</strong><br><br>Launch promotional price: <strong>R1305</strong>"
-],
-
-visa:[
-"Visa & Permit Administration",
-"Administrative assistance with visa and permit documentation for South Africa and other countries. LLCM provides administrative support only and does not provide legal or immigration advice."
-],
-
-promo:[
-"Business Promotional Materials",
-"Creative promotional materials for businesses. Contact LLCM for your requirements and a suitable quotation."
-]
-
+  promo: [
+    "Promotional Materials",
+    "Promotional designs and marketing materials for businesses.<br><br>Contact us with your requirements for a quotation.",
+    "Request a quote"
+  ]
 };
 
-function openModal(id){
+function openModal(service) {
+  const item = services[service];
+  if (!item) return;
 
-document.getElementById("modalTitle").textContent=services[id][0];
+  document.getElementById("modalTitle").textContent = item[0];
 
-let data=services[id];
+  document.getElementById("modalContent").innerHTML =
+    item[1] +
+    "<br><br><strong>Price: " + item[2] + "</strong>" +
+    '<br><br><a href="https://wa.me/27625636067" target="_blank" rel="noopener">Enquire on WhatsApp</a>';
 
-document.getElementById("modalContent").innerHTML=
-"<p>"+data[1]+"</p>"+
-(data[2]?"<p class='price'>Price: "+data[2]+"</p>":"")+
-"<a class='btn' href='https://wa.me/27625636067'>Request This Service</a>";
-
-document.getElementById("modal").style.display="block";
-
+  document.getElementById("modal").style.display = "flex";
 }
 
-function closeModal(){
-
-document.getElementById("modal").style.display="none";
-
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
 }
 
-function closeOutside(e){
-
-if(e.target.id==="modal")closeModal();
-
+function closeOutside(event) {
+  if (event.target.id === "modal") {
+    closeModal();
+  }
 }
+</script>
 
 /* ==================================================
    AUTOMATIC LLCM GALLERY SYSTEM
