@@ -1,4 +1,4 @@
-Hu<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,36 +27,54 @@ font-size:16px
 --muted:#d0d0d0
 }
 
+
 header{
-background:#080808;
-border-bottom:1px solid var(--gold);
-padding:15px 6%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-position:sticky;
-top:0;
-z-index:1000
+  background:#080808;
+  border-bottom:1px solid var(--gold);
+  padding:12px 3%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.logo{width:75px;height:75px;object-fit:contain}
+.logo{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+
 .brand{
-color:var(--gold);
-font-size:clamp(14px,2vw,24px);
-font-weight:bold;
-white-space:nowrap;
-flex-shrink:0
+  color:var(--gold);
+  font-size:16px;
+  font-weight:bold;
+  white-space:normal;
+  flex:0 1 190px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:5px 10px;
+  flex:1;
 }
 
 nav a{
-color:#fff;
-text-decoration:none;
-margin:0 8px;
-font-size:15px
+  color:#fff;
+  text-decoration:none;
+  margin:0;
+  font-size:13px;
 }
 
-nav a:hover{color:var(--gold)}
+nav a:hover{
+  color:var(--gold);
+}
+
 
 .hero{
 text-align:center;
